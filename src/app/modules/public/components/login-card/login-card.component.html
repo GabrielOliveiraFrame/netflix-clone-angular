@@ -1,0 +1,73 @@
+<div class="content">
+  <div class="card-container w-100 min-vh-100 pb-5">
+    <div class="logo-container p-4">
+      <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="logo" class="logo">
+    </div>
+
+    <div class="card mx-auto mt-5 pt-3">
+      <div class="card-body col-md-10 mx-auto">
+        <h2 class="card-title mb-4 text-light">Entrar</h2>
+
+        <form [formGroup]="form">
+          <div class="form-group">
+            <input type="text" class="form-control form-control-lg text-white" id="credential"
+            placeholder="Email ou número de telefone" autocomplete="off" formControlName="credential">
+
+            <app-err-msg *ngIf="!form.valid" fieldName="email ou número de telefone"
+            [control]="form.get('credential')"></app-err-msg>
+          </div>
+          <div class="form-group mb-5">
+            <input type="password" class="form-control form-control-lg text-white" id="password"
+            placeholder="Senha" autocomplete="off" formControlName="password">
+
+            <app-err-msg *ngIf="!form.valid" fieldName="senha"
+            [control]="form.get('password')"></app-err-msg>
+          </div>
+
+          <button type="submit" class="btn btn-danger btn-lg w-100 mb-2" (click)="submit()">
+            <strong>Entrar</strong>
+          </button>
+
+          <div class="form-recurses d-flex justify-content-between">
+            <div class="form-group form-check d-flex align-items-center">
+              <input type="checkbox" class="form-check-input" id="remember" formControlName="remember">
+              <label class="form-check-label" for="remember">
+                <small class="form-text">Lembre-se de mim</small>
+              </label>
+            </div>
+
+            <a href="https://www.netflix.com/br/LoginHelp" class="text-muted" target="blank">
+              <small>Precisa de ajuda?</small>
+            </a>
+          </div>
+        </form>
+
+        <div class="face-conect d-flex mt-2">
+          <img src="https://assets.nflxext.com/ffe/siteui/login/images/FB-f-Logo__blue_57.png"
+          alt="facebook" class="face-logo mr-2">
+          <small class="text-muted">Conectar com o Facebook</small>
+        </div>
+
+        <div class="signUp-call my-4">
+          <h6 class="text-muted">Novo por aqui? <a href="" class="text-white">Assine Agora</a></h6>
+        </div>
+
+        <div class="protect-info">
+          <small class="d-block mb-3">
+            Esta página é protegida pelo Google reCAPTCHA para garantir que você não é
+            um robô. <a href="" *ngIf="!activeText" (click)="$event.preventDefault()"
+            (click)="toogleText()">Saiba mais.</a>
+          </small>
+
+          <small *ngIf="activeText">
+            As informações recolhidas pelo Google reCAPTCHA estão sujeitas à
+            <a href="https://policies.google.com/privacy" target="blank">Política de Privacidade</a>
+            e <a href="https://policies.google.com/terms" target="blank">Termos de Uso</a>,
+            e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e
+            por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google).
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
