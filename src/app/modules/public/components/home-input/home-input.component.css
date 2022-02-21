@@ -1,0 +1,80 @@
+li {
+    list-style: none;
+}
+label {
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.inputError{
+    color: #ffa00a;
+}
+.email-input {
+    width: 500px;
+    height: 70px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.btn {
+    margin-top: 5px;
+    width: 200px;
+    height: 70px;
+    margin-top: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #ff0000;
+}
+
+.label-float {
+    position: relative;
+}
+
+.label-float input {
+    outline: none;
+    min-width: 180px;
+    font-size: 15px;
+    transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -webkit-appearance: none;
+}
+
+.label-float input::placeholder {
+    color: transparent;
+}
+
+.label-float label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 15px;
+    transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+}
+
+.label-float input:required:invalid+label {
+    color: #adadad;
+}
+
+.label-float input:focus:required:invalid {
+    border-bottom: 2px solid red;
+}
+
+.label-float input:focus+label,
+.label-float input:not(:placeholder-shown)+label {
+    font-size: 13px;
+    margin-top: 0;
+}
