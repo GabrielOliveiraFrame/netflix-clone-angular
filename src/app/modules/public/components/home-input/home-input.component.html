@@ -1,0 +1,24 @@
+<div>
+    <h3 class="email-form-title" style="color: #fff; text-align: center;">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
+    <form class="contac-form email-form d-inline-flex" [formGroup]="signUpForm" (ngSubmit)="signUp()">
+        <div clas="email-form-lockup">
+            <ul>
+                <li>
+                    <div class="label-float">
+                        <input type="email" placeholder=" " name="email" class="email-input" tabindex="0"
+                        formControlName='email'  autocomplete="email" maxlength="50" minlength="5" />
+                        <label>Email</label>
+                    </div>
+                    <app-err-msg *ngIf="!signUpForm.valid" fieldName="email"
+                    [control]="signUpForm.get('email')"></app-err-msg>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <button class="btn" type="submit">
+                <span id="" class="cta-btn-txt" style="font-size: 30px; color: #fff; font-weight: 550;">Vamos lá
+                    &gt;</span>
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,28 +1,29 @@
 <div class="content">
-  <nav class="navbar navbar-light bg-transparent position-absolute px-5 py-3 w-100">
-    <a class="navbar-brand" href="#">
-      <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="logo" class="logo">
-    </a>
+  <div class="first-section w-100 min-vh-100">
+    <nav class="navbar navbar-light px-5 py-3 w-100">
+      <a class="navbar-brand">
+        <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="logo" class="logo">
+      </a>
 
-    <ul class="nav justify-content-end">
-      <li class="nav-item mr-3">
-        <select class="form-control form-control-sm text-light bg-transparent">
-          <option>Português</option>
-          <option>Inglês</option>
-        </select>
-      </li>
-      <li class="nav-item">
-        <button type="button" class="btn btn-danger">Entrar</button>
-      </li>
-    </ul>
-  </nav>
+      <ul class="nav justify-content-end">
+        <li class="nav-item mr-3">
+          <select class="form-control form-control-sm text-light bg-transparent">
+            <option class="bg-dark">Português</option>
+            <option class="bg-dark">Inglês</option>
+          </select>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-danger" (click)="navigateLogin()">Entrar</button>
+        </li>
+      </ul>
+    </nav>
 
-  <div class="first-section d-flex align-items-center justify-content-center w-100 min-vh-100">
-    <div class="text-apresentation text-light text-center d-flex align-items-center">
-      <div>
+    <div class="text-apresentation d-flex flex-column justify-content-center align-items-center">
+      <div class="text-light text-center">
         <h1 class="display-4"><strong>Filmes, séries e muito mais. <br>Sem limites.</strong></h1>
         <h4>Assista onde quiser. Cancele quando quiser.</h4>
       </div>
+      <app-home-input></app-home-input>
     </div>
   </div>
 
@@ -31,14 +32,15 @@
       <div class="text-group text-light col-xl-6 d-flex align-items-center justify-content-center">
         <div class="px-5">
           <h1 class="display-4 mb-4"><strong>Aproveite na TV.</strong></h1>
-          <h4>Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</h4>
+          <h4>Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.
+          </h4>
         </div>
       </div>
 
       <div class="animation-tv d-flex justify-content-center align-items-center col-xl-6">
         <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="tv">
-        <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
-        autoplay muted playsinline loop class="position-absolute"></video>
+        <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" autoplay
+          muted playsinline loop class="position-absolute"></video>
       </div>
     </div>
   </div>
@@ -47,18 +49,18 @@
     <div class="row justify-content-center">
       <div class="animation-download d-flex justify-content-center align-items-center col-xl-6">
         <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="mobile"
-        class="mobile">
+          class="mobile">
         <div class="mini-gif-group p-3 position-absolute d-flex justify-content-center align-items-center">
           <div class="d-flex align-items-center mr-2">
             <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="poster"
-            class="poster mr-2">
+              class="poster mr-2">
             <div class="text">
               <p class="text-light mb-0">Stranger Things</p>
               <p class="mb-0 text-primary"> Download em andamento...</p>
             </div>
           </div>
           <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif" alt="gif"
-          class="gif">
+            class="gif">
         </div>
       </div>
 
@@ -81,9 +83,10 @@
       </div>
 
       <div class="animation-desktop d-flex justify-content-center align-items-center col-xl-6">
-        <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="desktop">
-        <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v"
-        autoplay muted playsinline loop class="position-absolute"></video>
+        <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
+          alt="desktop">
+        <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" autoplay
+          muted playsinline loop class="position-absolute"></video>
       </div>
     </div>
   </div>
@@ -91,15 +94,163 @@
   <div class="features-section mt-2 p-5 w-100">
     <div class="row justify-content-center">
       <div class="kids-group d-flex justify-content-center align-items-center col-xl-6">
-        <img src="https://occ-0-1311-185.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABUb4fcnETtielPJer_ORwZ2iUanycANl37cr81zDaXC9Fmg9c42ofxt0yxetNltG2xUMgf2Aqimz_q1Nsv-38Ng_EjIc.png?r=1b8" alt="cartoon">
+        <img
+          src="https://occ-0-1311-185.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABUb4fcnETtielPJer_ORwZ2iUanycANl37cr81zDaXC9Fmg9c42ofxt0yxetNltG2xUMgf2Aqimz_q1Nsv-38Ng_EjIc.png?r=1b8"
+          alt="cartoon">
       </div>
 
       <div class="text-group text-light col-xl-6 d-flex align-items-center justify-content-center">
         <div class="px-5">
           <h1 class="display-4 mb-4"><strong>Crie perfis para crianças.</strong></h1>
-          <h4>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.</h4>
+          <h4>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar
+            a mais por isso.</h4>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="features-section mt-2 p-5 w-100">
+    <div class="d-flex align-items-center justify-content-center flex-column">
+      <div style="margin-bottom:30px;">
+        <h1 style="color:#fff; font-size: 50px;">
+          <strong>
+            Perguntas frequentes
+          </strong>
+        </h1>
+      </div>
+      <div class="toggle-bar">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 d-flex">
+                <button class="btn d-inlineflex btn-block text-left btn-toggle" type="button" data-toggle="collapse"
+                  data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  O que é a Netflix?
+                </button>
+                <span class="d-inlineflex justify-content-end align-content-start">+</span>
+              </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <span>
+                  A Netflix é um serviço de transmissão online que oferece uma ampla variedade de séries, filmes e
+                  documentários premiados em milhares de aparelhos conectados à internet.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0 d-flex">
+                <button class="btn d-inlineflex btn-block btn-toggle text-left collapsed" type="button"
+                  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Quanto custa a Netflix?
+                </button>
+                <span class="d-inlineflex justify-content-end align-content-start">+</span>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <span>
+                  Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa
+                  mensal única. Os planos variam de R$25,90 a R$55,90 por mês. Sem contrato nem taxas extras.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0 d-flex">
+                <button class="btn d-inlineflex btn-block btn-toggle text-left collapsed" type="button"
+                  data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                  aria-controls="collapseThree">
+                  Onde posso assistir?
+                </button>
+                <span class="d-inlineflex justify-content-end align-content-start">+</span>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <span>
+                  Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa
+                  mensal única. Os planos variam de R$25,90 a R$55,90 por mês. Sem contrato nem taxas extras.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0 d-flex">
+                <button class="btn d-inlineflex btn-block btn-toggle text-left collapsed" type="button"
+                  data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                  aria-controls="collapseThree">
+                  Como faço para cancelar?
+                </button>
+                <span class="d-inlineflex justify-content-end align-content-start">+</span>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <span>
+                  A Netflix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na internet
+                  com apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua assinatura
+                  a qualquer momento. </span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0 d-flex">
+                <button class="btn d-inlineflex btn-block btn-toggle text-left collapsed" type="button"
+                  data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                  aria-controls="collapseThree">
+                  O que eu posso assistir na Netflix?
+                </button>
+                <span class="d-inlineflex justify-content-end align-content-start">+</span>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <span>
+                  A Netflix tem um grande catálogo de filmes, documentários, séries, originais Netflix premiados e muito
+                  mais. Assista o quanto quiser, quando quiser.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0 d-flex">
+                <button class="d-inlineflex btn btn-block btn-toggle text-left collapsed" type="button"
+                  data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                  aria-controls="collapseThree">
+                  A Netflix é adequada para crianças?
+                </button>
+                <span class="d-inlineflex justify-content-end align-content-start">+</span>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <span>
+                  A experiência infantil da Netflix faz parte da sua assinatura para que as crianças se divirtam em seu
+                  próprio espaço com séries e filmes familiares sob a supervisão dos pais.O recurso de controle dos
+                  pais, incluso nos perfis para crianças e protegido por PIN, permite restringir a classificação etária
+                  do conteúdo que as crianças podem ver e bloquear títulos específicos que você não quer que elas
+                  assistam.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <app-home-input></app-home-input>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column align-items-center justify-content-center rodape-section mt-2 p-5 w-100">
+    <app-rodape></app-rodape>
   </div>
 </div>
