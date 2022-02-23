@@ -1,0 +1,44 @@
+{
+  "Users": [
+    {
+      "email": "olá@olá",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "email": "WWWW@222",
+      "senha": "exSPcU9Yz5hekQ9",
+      "id": 2
+    },
+    {
+      "email": "2222222#@33",
+      "senha": "exSPcU9Yz5hekQ9",
+      "id": 3
+    },
+    {
+      "email": "frfffffff@fde",
+      "senha": "exSPcU9Yz5hekQ9",
+      "id": 4
+    },
+    {
+      "email": "leo@loeee",
+      "senha": "exSPcU9Yz5hekQ9",
+      "id": 5
+    },
+    {
+      "email": "leo@leoeeee",
+      "senha": "exSPcU9Yz5hekQ9",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

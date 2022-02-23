@@ -78,3 +78,13 @@ h3 {
     font-size: 13px;
     margin-top: 0;
 }
+
+.email-form-title{
+    color: #fff;
+    text-align: center;
+}
+.cta-btn-txt{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 550;
+}

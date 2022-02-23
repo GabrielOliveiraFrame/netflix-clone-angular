@@ -42,7 +42,7 @@ a:visited{
     margin-bottom: 10px;
     padding-right: 5px;
     width: 160px;
-    height: 50px;
+    height: 55px;
     border: 1px solid white;
     border-radius: 3px;
 }
@@ -51,8 +51,11 @@ a:visited{
     margin-right: 20px;
 }
 select{
-    color: rgb(189, 189, 189);
+    color: rgb(189, 189, 189); 
     font-weight: 600;
-    background-color: black;
+    background-color: transparent;
     border: none;
+}
+.footer-links{
+    list-style: none;
 }

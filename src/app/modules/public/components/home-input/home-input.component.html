@@ -1,6 +1,6 @@
 <div>
-    <h3 class="email-form-title" style="color: #fff; text-align: center;">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
-    <form class="contac-form email-form d-inline-flex" [formGroup]="signUpForm" (ngSubmit)="signUp()">
+    <h3 class="email-form-title">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
+    <form class="contac-form email-form d-inline-flex" [formGroup]="signUpForm">
         <div clas="email-form-lockup">
             <ul>
                 <li>
@@ -15,8 +15,8 @@
             </ul>
         </div>
         <div>
-            <button class="btn" type="submit">
-                <span id="" class="cta-btn-txt" style="font-size: 30px; color: #fff; font-weight: 550;">Vamos lá
+            <button (click)="submit()" class="btn" type="submit">
+                <span id="" class="cta-btn-txt">Vamos lá
                     &gt;</span>
             </button>
         </div>

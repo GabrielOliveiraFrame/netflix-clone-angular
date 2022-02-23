@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { FormValidations } from 'src/app/shared/validators/form-validations';
 
 
 @Component({
@@ -16,12 +17,22 @@ export class HomeInputComponent implements OnInit {
   constructor(private formbuilder: FormBuilder, private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
+    this.creatForm();
+  }
+  signUp(){
+    this.router.navigate(['/public/signUp']);
+  }
+  creatForm(){
     this.signUpForm = this.formbuilder.group({
       email: ['', Validators.required]
     })
   }
-  signUp(){
-
+  submit(): void {
+    if(this.signUpForm.valid){
+      this.signUp();
+    } else {
+      FormValidations.checkValidations(this.signUpForm);
+    }
   }
 
 }
