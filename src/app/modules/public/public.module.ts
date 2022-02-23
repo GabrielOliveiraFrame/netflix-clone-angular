@@ -6,10 +6,10 @@ import { HomeInputComponent } from './components/home-input/home-input.component
 import { SharedComponentsModule } from 'src/app/shared/components/shared-components.module';
 import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { LoginCardComponent } from './components/login-card/login-card.component';
-
+import { SignUpCardComponent } from './components/sign-up-card/sign-up-card.component';
 
 @NgModule({
-  declarations: [HomeComponent, HomeInputComponent, LoginCardComponent],
+  declarations: [HomeComponent, HomeInputComponent, LoginCardComponent, SignUpCardComponent],
   imports: [
     CommonModule,
     PublicRoutingModule,

@@ -51,8 +51,11 @@ a:visited{
     margin-right: 20px;
 }
 select{
-    color: rgb(189, 189, 189);
+    color: rgb(189, 189, 189); 
     font-weight: 600;
-    background-color: black;
+    background-color: transparent;
     border: none;
+}
+.footer-links{
+    list-style: none;
 }

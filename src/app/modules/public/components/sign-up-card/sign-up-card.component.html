@@ -1,0 +1,169 @@
+<ng-container *ngIf="cont == 0">
+    <div class="content">
+        <div class="first-section w-100 min-vh-100">
+            <nav class="navbar navbar-light px-5 py-3 w-100">
+                <a class="navbar-brand">
+                    <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="logo" class="logo">
+                </a>
+
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-light" (click)="navigateLogin()">
+
+                            <span class="nav-text">Entrar</span>
+
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="d-flex flex-column justify-content-center align-items-center path-content  w-100 min-vh-100">
+                <div class="card">
+                    <div class="logo-path">
+                        <span class="logo-body">
+                            <img class="logo-body-img"
+                                src="https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Devices.png" alt="">
+                        </span>
+                        <span class="path-text-logo">
+                            PASSO 1 DE
+                            <Strong><span>3</span></Strong>
+                        </span>
+                    </div>
+                    <div>
+                        <h1>
+                            Termine de configurar sua conta
+                        </h1>
+                    </div>
+                    <div>
+                        <span class="path-text">A Netflix é personalizada para você. Crie uma senha para assistir em
+                            qualquer aparelho quando quiser.
+                        </span>
+                        <button (click)="navigateNext()" class="path-button">Proxímo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="cont == 1">
+    <div class="content">
+        <div class="first-section w-100 min-vh-100">
+            <nav class="navbar navbar-light px-5 py-3 w-100">
+                <a class="navbar-brand">
+                    <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="logo" class="logo">
+                </a>
+
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-light" (click)="navigateLogin()">
+
+                            <span class="nav-text">Entrar</span>
+
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="d-flex flex-column align-items-center path-content  w-100 min-vh-100">
+                <div class="card2">
+                    <div class="logo-path2">
+                        <span class="path-text-logo2">
+                            PASSO 1 DE
+                            <Strong><span>3</span></Strong>
+                        </span>
+                    </div>
+                    <div>
+                        <h1>
+                            Crie uma senha para iniciar sua assinatura
+                        </h1>
+                    </div>
+                    <div>
+                        <span class="path-text2">
+                            Faltam só mais alguns passos!
+                        </span>
+                        <span class="path-text2">
+                            Nós também detestamos formulários.
+                        </span>
+                        <div>
+                            <form [formGroup]="signUpForm">
+                                <div class="mb-3 mt-3">
+                                    <div class="label-float">
+                                        <input type="email" placeholder=" " name="email" class="email-input"
+                                            tabindex="0" formControlName='email' autocomplete="email" maxlength="50"
+                                            minlength="5" />
+                                        <label>Email</label>
+                                    </div>
+                                    <app-err-msg *ngIf="!signUpForm.valid" fieldName="email"
+                                        [control]="signUpForm.get('email')"></app-err-msg>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="label-float">
+                                        <input type="password" placeholder=" " name="senha" class="senha-input"
+                                            tabindex="0" formControlName='senha' autocomplete="password" maxlength="50"
+                                            minlength="5" />
+                                        <label>Adicione uma senha</label>
+                                    </div>
+                                    <app-err-msg *ngIf="!signUpForm.valid" fieldName="senha"
+                                        [control]="signUpForm.get('senha')"></app-err-msg>
+                                </div>
+                                <button (click)="navigateNext()" class="path-button2">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="cont == 2">
+    <div class="content">
+        <div class="first-section w-100 min-vh-100">
+            <nav class="navbar navbar-light px-5 py-3 w-100">
+                <a class="navbar-brand">
+                    <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="logo" class="logo">
+                </a>
+
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-light" (click)="navigateLogin()">
+
+                            <span class="nav-text">Entrar</span>
+
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="d-flex flex-column justify-content-center align-items-center path-content  w-100 min-vh-100">
+                <div class="card">
+                    <div class="logo-path3">
+                        <span class="logo-body3">
+                            <img class="logo-body-img3"
+                                src="https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Checkmark.png" alt="">
+                        </span>
+                        <span class="path-text-logo">
+                            PASSO 2 DE
+                            <Strong><span>3</span></Strong>
+                        </span>
+                    </div>
+                    <div>
+                        <h1>
+                            Comece o seu plano.
+                        </h1>
+                    </div>
+                    <div>
+                        <ul class="lista-final">
+                        <li><i class="fa-solid fa-check"></i><span class="checkzinho">Sem compromisso, cancele quando quiser.</span></li>
+                        <li><i class="fa-solid fa-check"></i><span class="checkzinho">Todo o conteúdo da Netflix por um preço único e acessível.</span></li>
+                        <li><i class="fa-solid fa-check"></i><span class="checkzinho">Assista o quanto quiser em todos os seus aparelhos.</span></li>
+                        </ul>
+                        <button (click)="signUp()" class="path-button3">Proxímo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
