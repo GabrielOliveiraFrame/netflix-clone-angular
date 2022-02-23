@@ -24,7 +24,7 @@ export class HomeInputComponent implements OnInit {
   }
   creatForm(){
     this.signUpForm = this.formbuilder.group({
-      email: ['', Validators.required]
+      email: ['', [Validators.required, Validators.email]]
     })
   }
   submit(): void {

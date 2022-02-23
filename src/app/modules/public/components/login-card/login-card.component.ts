@@ -25,8 +25,8 @@ export class LoginCardComponent implements OnInit {
 
   createForm(): void {
     this.form = this.fb.group({
-      credential: [null, [Validators.required]],
-      password: [null, [Validators.required]],
+      email: [null, [Validators.required, Validators.email]],
+      senha: [null, [Validators.required]],
       remember: [true]
     })
   }

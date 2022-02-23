@@ -11,9 +11,12 @@ export class FormValidations {
     })
   }
 
-  static getMsg(fieldName: string, errName: string): string {
+  static getMsg(fieldName: string, errName: string, errValue?: any): string {
     const messages = {
-      'required': `O campo '${fieldName}' é obrigatório.`
+      'required': `O campo '${fieldName}' é obrigatório.`,
+      'maxlength': `O campo '${fieldName}' precisa ter no máx. ${errValue.requiredLength} caracteres.`,
+      'minlength': `O campo '${fieldName}' precisa ter no mín. ${errValue.requiredLength} caracteres.`,
+      'email': 'Digite um email válido.'
     }
     return messages[errName];
   }

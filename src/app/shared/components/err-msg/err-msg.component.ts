@@ -22,7 +22,7 @@ export class ErrMsgComponent implements OnInit {
   get getMsg(): string {
     for (const err in this.control?.errors) {
       if(this.control?.dirty || this.control?.touched){
-        return FormValidations.getMsg(this.fieldName, err);
+        return FormValidations.getMsg(this.fieldName, err, this.control.errors[err]);
       } else {
         return null
       }

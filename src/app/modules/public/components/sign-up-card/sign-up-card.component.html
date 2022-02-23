@@ -91,8 +91,7 @@
                                 <div class="mb-3 mt-3">
                                     <div class="label-float">
                                         <input type="email" placeholder=" " name="email" class="email-input"
-                                            tabindex="0" formControlName='email' autocomplete="email" maxlength="50"
-                                            minlength="5" />
+                                            tabindex="0" formControlName='email' autocomplete="email"/>
                                         <label>Email</label>
                                     </div>
                                     <app-err-msg *ngIf="!signUpForm.valid" fieldName="email"
@@ -101,14 +100,13 @@
                                 <div class="mb-3">
                                     <div class="label-float">
                                         <input type="password" placeholder=" " name="senha" class="senha-input"
-                                            tabindex="0" formControlName='senha' autocomplete="password" maxlength="50"
-                                            minlength="5" />
+                                            tabindex="0" formControlName='senha' autocomplete="password" />
                                         <label>Adicione uma senha</label>
                                     </div>
                                     <app-err-msg *ngIf="!signUpForm.valid" fieldName="senha"
                                         [control]="signUpForm.get('senha')"></app-err-msg>
                                 </div>
-                                <button (click)="navigateNext()" class="path-button2">Cadastrar</button>
+                                <button type="button" (click)="navigateNext()" class="path-button2">Cadastrar</button>
                             </form>
                         </div>
                     </div>

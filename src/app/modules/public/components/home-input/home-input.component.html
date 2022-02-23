@@ -5,8 +5,8 @@
             <ul>
                 <li>
                     <div class="label-float">
-                        <input type="email" placeholder=" " name="email" class="email-input" tabindex="0"
-                        formControlName='email'  autocomplete="email" maxlength="50" minlength="5" />
+                        <input type="email" placeholder=" " name="email" class="email-input pl-2" tabindex="0"
+                        formControlName='email'  autocomplete="email"/>
                         <label>Email</label>
                     </div>
                     <app-err-msg *ngIf="!signUpForm.valid" fieldName="email"
@@ -15,7 +15,7 @@
             </ul>
         </div>
         <div>
-            <button (click)="submit()" class="btn" type="submit">
+            <button (click)="submit()" class="btn" type="button">
                 <span id="" class="cta-btn-txt">Vamos lá
                     &gt;</span>
             </button>

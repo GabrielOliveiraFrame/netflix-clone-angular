@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { UserService } from 'src/app/shared/service/user.service';
 import { FormValidations } from 'src/app/shared/validators/form-validations';
 
@@ -14,10 +13,9 @@ import { FormValidations } from 'src/app/shared/validators/form-validations';
 export class SignUpCardComponent implements OnInit {
 
   constructor(private router: Router, private formbuilder: FormBuilder, private http: HttpClient, private userService: UserService) { }
-  private user = new Observable<any>();
   public signUpForm!: FormGroup;
   public cont:number = 0;
-  
+
   ngOnInit(): void {
     this.formBuilder();
   }
@@ -27,16 +25,23 @@ export class SignUpCardComponent implements OnInit {
   }
 
   navigateNext(){
-    this.cont++;   
+    if(this.cont == 1){
+      if(this.signUpForm.valid){
+        this.cont++;
+      } else {
+        FormValidations.checkValidations(this.signUpForm);
+      }
+    } else {
+      this.cont++;
+    }
   }
+
   signUp(){
-    const valorForm = this.signUpForm.value;
-    if(this.signUpForm.valid){
-      this.userService.getUser(this.signUpForm.get('email').value).subscribe({
+    this.userService.getUser(this.signUpForm.get('email').value).subscribe({
       next: (result: any) => {
-        console.log(result);
+       console.log(result);
         if(result.length !== 0){
-          alert("Esse usuário já esta cadastrado")
+          alert("Esse usuário já esta cadastrado");
         }else{
           this.userService.postUser(this.signUpForm.value).subscribe({
             next: (data:any) =>{
@@ -44,17 +49,16 @@ export class SignUpCardComponent implements OnInit {
             }
           });
         }
-      }, error: (err: any) => {}
+      }, error: (err: any) => {
+        alert('Erro de servidor, tente novamente!');
+      }
     })
-    } else {
-      FormValidations.checkValidations(this.signUpForm);
-    }
   }
-    
+
   formBuilder(){
     this.signUpForm = this.formbuilder.group({
-      email: ['', Validators.required],
-      senha: ['', Validators.required]
+      email: ['', [Validators.required, Validators.email]],
+      senha: ['', [Validators.required, Validators.maxLength(50), Validators.minLength(5)]]
     })
-  }  
+  }
 }

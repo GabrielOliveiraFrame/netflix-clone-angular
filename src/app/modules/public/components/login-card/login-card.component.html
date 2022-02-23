@@ -10,18 +10,18 @@
 
         <form [formGroup]="form">
           <div class="form-group">
-            <input type="text" class="form-control form-control-lg text-white" id="credential"
-            placeholder="Email ou número de telefone" autocomplete="off" formControlName="credential">
+            <input type="text" class="form-control form-control-lg text-white" id="email"
+            placeholder="Email" formControlName="email">
 
-            <app-err-msg *ngIf="!form.valid" fieldName="email ou número de telefone"
-            [control]="form.get('credential')"></app-err-msg>
+            <app-err-msg *ngIf="!form.valid" fieldName="email"
+            [control]="form.get('email')"></app-err-msg>
           </div>
           <div class="form-group mb-5">
-            <input type="password" class="form-control form-control-lg text-white" id="password"
-            placeholder="Senha" autocomplete="off" formControlName="password">
+            <input type="password" class="form-control form-control-lg text-white" id="senha"
+            placeholder="Senha" autocomplete="off" formControlName="senha">
 
             <app-err-msg *ngIf="!form.valid" fieldName="senha"
-            [control]="form.get('password')"></app-err-msg>
+            [control]="form.get('senha')"></app-err-msg>
           </div>
 
           <button type="submit" class="btn btn-danger btn-lg w-100 mb-2" (click)="submit()">
