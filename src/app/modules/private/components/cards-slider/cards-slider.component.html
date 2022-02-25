@@ -1,0 +1,8 @@
+<div class="content bg-transparent">
+  <h3 class="ml-2 py-2 text-light">{{title}}</h3>
+  <carousel [cellsToScroll]="1" [objectFit]="'cover'" [cellWidth]="300" >
+    <div class="carousel-cell" *ngFor="let movie of movies">
+        <img src="https://image.tmdb.org/t/p/w300{{movie.backdrop_path}}">
+    </div>
+  </carousel>
+</div>
