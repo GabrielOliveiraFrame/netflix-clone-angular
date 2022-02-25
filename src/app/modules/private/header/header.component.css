@@ -1,0 +1,137 @@
+.navbar .logo {
+    width: 100px;
+    margin-right: 10px;
+    margin-left: 50px;
+}
+
+.nav-links {
+    color: #fff;
+    font-size: 15px;
+}
+
+.bg-nav {
+    background: #0a0a0a;
+}
+
+.btn-search {
+    z-index: 1;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.btn-search:focus~input {
+    transform: translate(4px 3px);
+    width: 50px;
+    height: 50px;
+}
+
+.btn-bell {
+    z-index: 1;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+.btn-user {
+    z-index: 1;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+.input-search {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.form-size {
+    width: 216px;
+}
+
+.search-icon {
+    font-size: 18px;
+}
+
+.nav-bar {
+    padding-top: 15px;
+}
+
+.first-section {
+    background-image:
+        url(https://occ-0-5484-1380.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQnqkRh551B6kQvrHc-mW84mN3n8ojSmp9apY8kNPf3rdcRKNkjrJk0PsSAXgFcLGrbOr91Xgma8YK1FSChMaShJdmRm.jpg?r=454);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.texto-filme {
+    width: 500px;
+    margin-left: 60px;
+    color: #fff;
+}
+
+.titulo-filme {
+    font-family: Montserrat;
+    line-height: 90px;
+    font-size: 100px;
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.lançamento-filme {
+    margin: 20px 0px;
+    font-size: 1.6vw;
+}
+
+.sinopse {
+    color: #fff;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+    font-size: 1.4vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
+}
+button{
+    margin-top: 15px;
+}
+.button-trailer{
+    width: 150px;
+    height: 50px;
+    font-size: 1.6rem;
+    border-radius: 5px;    
+}
+.button-trailer:hover{
+    opacity: 0.7;
+}
+
+.button-plus{
+    margin-left: 20px;
+    width: 250px;
+    height: 50px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+}
+
+.button-plus:hover{
+    opacity: 0.7;
+}
+
+.icon-trailer{
+    margin-right: 20px;
+}
+
+.icon-plus{
+    margin-right: 5px;
+    
+}
+
+.icon-plus{
+    font-size: 1.2rem;
+    width: 30px;
+    height: 30px;
+    border: 3px solid black;
+    border-radius: 20px;
+}

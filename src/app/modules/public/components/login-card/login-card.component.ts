@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FormValidations } from 'src/app/shared/validators/form-validations';
 
 @Component({
@@ -12,7 +13,8 @@ export class LoginCardComponent implements OnInit {
   form: FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router:Router
   ) { }
 
   ngOnInit(): void {
@@ -34,6 +36,7 @@ export class LoginCardComponent implements OnInit {
   submit(): void {
     if(this.form.valid){
       console.log(this.form.value);
+      this.router.navigate(['/private/header']);
     } else {
       FormValidations.checkValidations(this.form);
     }
