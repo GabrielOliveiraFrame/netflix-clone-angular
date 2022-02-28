@@ -22,4 +22,8 @@ export class MoviesService {
   getTopRated(){
     return this.http.get(`${environment.API_MOVIES}/top_rated?api_key=${environment.API_KEY}&language=pt-br&page=1`);
   }
+
+  getDetais(id: number){
+    return this.http.get(`${environment.API_MOVIES}/${id}?api_key=${environment.API_KEY}&language=pt-br`);
+  }
 }

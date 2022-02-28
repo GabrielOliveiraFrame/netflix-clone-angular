@@ -27,8 +27,8 @@ export class CardsSliderComponent implements OnInit {
   }
 
   getMovies(){
-    this.type === 'genre' ? this.getMoviesByGenre() : null;
-    this.type === 'popular' ? this.getMoviesPopular() : this.getMoviesTopRated();
+    this.type === 'genre' ? this.getMoviesByGenre() : this.type === 'popular' ?
+    this.getMoviesPopular() : this.getMoviesTopRated();
   }
 
   getMoviesByGenre(){
@@ -37,13 +37,13 @@ export class CardsSliderComponent implements OnInit {
     });
   }
 
-  getMoviesTopRated(){
+  getMoviesPopular(){
     this.moviesService.getPopular().subscribe((data: any) => {
       this.movies = data.results;
     });
   }
 
-  getMoviesPopular(){
+  getMoviesTopRated(){
     this.moviesService.getTopRated().subscribe((data: any) => {
       this.movies = data.results;
     });
