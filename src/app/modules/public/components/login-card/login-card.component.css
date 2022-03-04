@@ -40,3 +40,8 @@
 .card .protect-info{
   min-height: 190px;
 }
+
+.spinner-border{
+  height: 25px;
+  width: 25px;
+}

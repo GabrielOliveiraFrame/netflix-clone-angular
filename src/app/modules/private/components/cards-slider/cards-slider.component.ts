@@ -41,9 +41,14 @@ export class CardsSliderComponent implements OnInit {
   }
 
   getMovies(){
+<<<<<<< HEAD
     this.type === 'genre' ? this.getMoviesByGenre() : this.type ===
     'popular' ? this.getMoviesPopular() : this.getMoviesTopRated();
 
+=======
+    this.type === 'genre' ? this.getMoviesByGenre() : this.type === 'popular' ?
+    this.getMoviesPopular() : this.getMoviesTopRated();
+>>>>>>> 42a2077b65a4dd707d70d439a93535757e5720a5
   }
 
   getMoviesByGenre(){
@@ -52,14 +57,24 @@ export class CardsSliderComponent implements OnInit {
     });
   }
 
+<<<<<<< HEAD
   getMoviesTopRated(){
     this.moviesService.getTopRated().subscribe((data: any) => {
+=======
+  getMoviesPopular(){
+    this.moviesService.getPopular().subscribe((data: any) => {
+>>>>>>> 42a2077b65a4dd707d70d439a93535757e5720a5
       this.movies = data.results;
     });
   }
 
+<<<<<<< HEAD
   getMoviesPopular(){
     this.moviesService.getPopular().subscribe((data: any) => {
+=======
+  getMoviesTopRated(){
+    this.moviesService.getTopRated().subscribe((data: any) => {
+>>>>>>> 42a2077b65a4dd707d70d439a93535757e5720a5
       this.movies = data.results;
     });
   }
