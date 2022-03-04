@@ -1,5 +1,18 @@
-
-
 .carousel-arrows{
     margin-bottom: 50px !important;
+    position: relative !important;
+    z-index: 9999999999999999 !important;
+}
+
+h4{
+    margin-left: 60px !important;
+    font-size: 1.4vw;
+}
+.carousel-cell{
+ margin-left:60px;
+}
+
+.cardFilm{
+    z-index: 99999;
+    bottom: 0px;
 }

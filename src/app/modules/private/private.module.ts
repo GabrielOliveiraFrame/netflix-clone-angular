@@ -4,10 +4,11 @@ import { PrivateRoutingModule } from './private-routing.module';
 import { CardsSliderComponent } from './components/cards-slider/cards-slider.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { HeaderComponent } from './components/header/header.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, CardsSliderComponent],
+  declarations: [HeaderComponent, CardsSliderComponent, ModalComponent],
   imports: [
     CommonModule,
     PrivateRoutingModule,
