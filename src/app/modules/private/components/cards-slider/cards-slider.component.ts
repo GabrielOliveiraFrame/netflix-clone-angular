@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MoviesService } from 'src/app/shared/service/movies.service';
 
 @Component({
@@ -15,6 +15,9 @@ export class CardsSliderComponent implements OnInit {
 
   @Input()
   type: string;
+
+  @Output()
+  movieClicked = new EventEmitter();
 
   movies: any;
 
@@ -47,5 +50,9 @@ export class CardsSliderComponent implements OnInit {
     this.moviesService.getTopRated().subscribe((data: any) => {
       this.movies = data.results;
     });
+  }
+
+  movieClick(id: number){
+    this.movieClicked.emit(id);
   }
 }

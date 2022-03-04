@@ -2,7 +2,8 @@
   <h4 class="ml-2 py-2 text-light title-text"><strong>{{title}}</strong></h4>
   <carousel [cellsToScroll]="1" [objectFit]="'cover'" [cellWidth]="250" [height]="150" arrowsTheme='dark' lightDOM='true'>
     <div class="carousel-cell" *ngFor="let movie of movies">
-        <img src="https://image.tmdb.org/t/p/w300{{movie.backdrop_path}}">
+        <img src="https://image.tmdb.org/t/p/w300{{movie.backdrop_path}}" (click)="movieClick(movie.id)"
+        data-toggle="modal" data-target="#modalMovie">
     </div>
   </carousel>
 </div>

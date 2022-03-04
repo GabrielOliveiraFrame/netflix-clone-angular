@@ -17,10 +17,16 @@ export class HeaderComponent implements OnInit {
     {id: 18, title: "Filmes de Drama"}
   ];
 
+  movieClickedId: number;
+  showDetails: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
+  onMovieClicked(event: any){
+    this.movieClickedId = event;
+    this.showDetails = true;
+  }
 }

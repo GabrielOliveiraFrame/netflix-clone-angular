@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content" >
   <div class="first-section w-100 min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-nav nav-bar fixed-top">
       <a class="navbar-brand" href="#">
@@ -34,9 +34,13 @@
     </div>
   </div>
   <div>
-    <app-cards-slider title="Filmes Melhores Avaliados"></app-cards-slider>
+    <app-cards-slider title="Filmes Melhores Avaliados"
+      (movieClicked)="onMovieClicked($event)"></app-cards-slider>
   </div>
   <div *ngFor="let genre of generos">
-    <app-cards-slider title={{genre.title}} genre = {{genre.id}} type = "genre"></app-cards-slider>
+    <app-cards-slider title={{genre.title}} genre = {{genre.id}} type = "genre"
+      (movieClicked)="onMovieClicked($event)"></app-cards-slider>
   </div>
+
+  <app-details-click *ngIf="showDetails" [movieId]="movieClickedId" class="detail-modal"></app-details-click>
 </div>

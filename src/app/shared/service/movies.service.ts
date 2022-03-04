@@ -26,4 +26,12 @@ export class MoviesService {
   getDetais(id: number){
     return this.http.get(`${environment.API_MOVIES}/${id}?api_key=${environment.API_KEY}&language=pt-br`);
   }
+
+  getVideos(id: number){
+    return this.http.get(`${environment.API_MOVIES}/${id}/videos?api_key=${environment.API_KEY}&language=pt-br`);
+  }
+
+  getSimilar(id: number){
+    return this.http.get(`${environment.API_MOVIES}/${id}/similar?api_key=${environment.API_KEY}&language=pt-br&page=1`);
+  }
 }

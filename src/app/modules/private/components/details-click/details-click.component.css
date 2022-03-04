@@ -1,0 +1,101 @@
+.modal{
+  background-color: rgb(36, 36, 36, 0.5);
+}
+
+.modal-content{
+  background-color: rgb(31, 31, 31);
+}
+
+.modal-body{
+  border-radius: 7px;
+}
+
+.modal-body .close-circle{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgb(51, 51, 51);
+  cursor: pointer;
+}
+
+.modal-body .close-icon{
+  color: #fff;
+  font-size: 20px;
+}
+
+.modal-body .videoBox{
+  height: 450px;
+}
+
+.modal-body .videoBox img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-body .title{
+  width: 95%;
+  position: absolute;
+  bottom: 100px;
+  text-shadow: 1px 1px 1px black;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.modal-body .btn-group{
+  position: absolute;
+  bottom: 50px;
+}
+
+.modal-body .play-btn{
+  width: 120px;
+}
+
+.modal-body .circle-btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgb(188, 204, 255);
+  background-color: rgb(36, 36, 36, 0.5);
+  cursor: pointer;
+}
+
+.modal-body .btn-icon{
+  font-size: 20px;
+  color: #fff;
+}
+
+.modal-body .other-info{
+  font-size: 15px;
+}
+
+.modal-body .virgula-off{
+  display: none;
+}
+
+.modal-body .livre-icon{
+  width: 20px;
+}
+
+.modal-body .similar-movies{
+  height: 770px;
+  overflow: hidden;
+}
+
+.modal-body .similar-auto{
+  height: auto;
+}
+
+.more-group{
+  position: relative;
+  bottom: 20px;
+}
+
+.modal-body .more-circle{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}

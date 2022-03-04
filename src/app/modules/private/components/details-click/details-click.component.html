@@ -1,0 +1,138 @@
+<div class="modal fade" id="modalMovie" data-backdrop="static" data-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body p-0 pb-4" *ngIf="movie">
+        <div class="videoBox w-100 position-relative">
+          <div class="close-circle d-flex align-items-center justify-content-center"
+            (click)="close()" data-dismiss="modal">
+            <i class="fa-solid fa-xmark close-icon"></i>
+          </div>
+
+          <iframe class="w-100 h-100" [src]="safeUrl" *ngIf="safeUrl"
+          frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+          <img *ngIf="!safeUrl" src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}">
+
+          <div class="title text-light px-5">
+            <h2>{{movie.title}}</h2>
+          </div>
+
+          <div class="btn-group w-100 d-flex justify-content-between px-5">
+            <div class="left-btn d-flex align-items-center">
+              <button type="button" class="btn btn-light d-flex align-items-center play-btn justify-content-center">
+                <i class="fa-solid fa-play btn-icon text-dark mr-2 play-icon"></i>
+                <strong>Assistir</strong>
+              </button>
+
+              <div class="circle-btn d-flex align-items-center justify-content-center ml-2">
+                <i class="fa-solid fa-plus btn-icon"></i>
+              </div>
+
+              <div class="circle-btn d-flex align-items-center justify-content-center ml-2">
+                <i class="fa-solid fa-thumbs-up btn-icon"></i>
+              </div>
+
+              <div class="circle-btn d-flex align-items-center justify-content-center ml-2">
+                <i class="fa-solid fa-thumbs-down btn-icon"></i>
+              </div>
+            </div>
+
+            <div class="right-btn" *ngIf="safeUrl">
+              <div class="circle-btn d-flex align-items-center justify-content-center ml-2">
+                <i class="fa-solid fa-volume-high btn-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info text-light px-5 my-3">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="min-info d-flex align-items-center">
+                <span class="mr-3" [class.text-success]="movie.vote_average >= 6"
+                  [class.text-warning]="movie.vote_average < 6" [class.text-danger]="movie.vote_average <= 4">
+                  {{movie.vote_average}}/10
+                </span>
+                <span class="mr-3">{{movie.release_date | date: 'yyyy'}}</span>
+                <img src="https://logodownload.org/wp-content/uploads/2017/07/classificacao-livre-logo.png"
+                  class="livre-icon mr-3" alt="livre">
+                <span>{{getHours}}</span>
+              </div>
+
+              <div class="overview mt-3">
+                <p>{{movie.overview}}</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="other-info w-100 d-flex flex-wrap mb-1">
+                <span class="text-muted mr-2">Gêneros:</span>
+                <span *ngFor="let genre of movie.genres; let i = index" class="mr-1">
+                  {{genre.name}}<span [class.virgula-off]="i === movie.genres.length-1">,</span>
+                </span>
+              </div>
+
+              <div class="other-info w-100 d-flex flex-wrap mb-1">
+                <span class="text-muted mr-2">Produtora(s):</span>
+                <span *ngFor="let companie of movie.production_companies; let i = index" class="mr-1">
+                  {{companie.name}}<span [class.virgula-off]="i === movie.production_companies.length-1">,</span>
+                </span>
+              </div>
+
+              <div class="other-info w-100 d-flex flex-wrap">
+                <span class="text-muted mr-2">Linguagem original:</span>
+                <span class="mr-1">{{movie.original_language}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="similar-movies px-5" [class.similar-auto]="showAllSimilar">
+          <h4 class="text-light">Títulos Semelhantes</h4>
+
+          <div class="row">
+            <div class="col-md-4 mt-3 p-1" *ngFor="let similar of similars">
+              <app-similar-card [movie]="similar"></app-similar-card>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-5 more-group">
+          <div class="circle-btn d-flex align-items-center justify-content-center ml-2 more-circle"
+            (click)="toggleSimilar()">
+            <i class="fa-solid fa-angle-down btn-icon" *ngIf="!showAllSimilar"></i>
+            <i class="fa-solid fa-angle-up btn-icon" *ngIf="showAllSimilar"></i>
+          </div>
+        </div>
+
+        <div class="final-info px-5 text-light">
+          <h4><strong>Sobre {{movie.title}}</strong></h4>
+
+          <div class="other-info w-100 d-flex flex-wrap mb-2 mt-3">
+            <span class="text-muted mr-2">Título original:</span>
+            <span>{{movie.original_title}}</span>
+          </div>
+
+          <div class="other-info w-100 d-flex flex-wrap mb-2">
+            <span class="text-muted mr-2">Orçamento:</span>
+            <span *ngIf="movie.budget != 0">{{movie.budget | currency}}</span>
+            <span *ngIf="movie.budget == 0"> - </span>
+          </div>
+
+          <div class="other-info w-100 d-flex flex-wrap mb-2">
+            <span class="text-muted mr-2">Gêneros:</span>
+            <span *ngFor="let genre of movie.genres; let i = index" class="mr-1">
+              {{genre.name}}<span [class.virgula-off]="i === movie.genres.length-1">,</span>
+            </span>
+          </div>
+
+          <div class="other-info w-100 d-flex flex-wrap">
+            <span class="text-muted mr-3">Classificação etária:</span>
+            <img src="https://logodownload.org/wp-content/uploads/2017/07/classificacao-livre-logo.png"
+            class="livre-icon mr-2" alt="livre">
+            <span>Livre para todos os públicos</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

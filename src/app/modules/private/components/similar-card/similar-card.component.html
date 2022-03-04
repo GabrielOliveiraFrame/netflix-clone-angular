@@ -1,0 +1,28 @@
+<div class="card w-100">
+  <img src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}" class="card-img-top text-white" alt="background">
+  <div class="card-body text-white">
+    <h6 class="title">{{movie.title}}</h6>
+    <div class="info mb-3 d-flex align-items-center justify-content-between">
+      <div>
+        <span class="mr-3" [class.text-success]="movie.vote_average >= 6"
+          [class.text-warning]="movie.vote_average < 6" [class.text-danger]="movie.vote_average <= 4">
+          {{movie.vote_average | number: '1.1-1'}}/10
+        </span>
+
+        <div class="mt-1 d-flex align-items-center">
+          <img src="https://logodownload.org/wp-content/uploads/2017/07/classificacao-livre-logo.png"
+            class="livre-icon mr-2" alt="livre">
+          <span>{{movie.release_date | date: 'yyyy'}}</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="circle-btn d-flex align-items-center justify-content-center">
+          <i class="fa-solid fa-plus btn-icon"></i>
+        </div>
+      </div>
+    </div>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+
