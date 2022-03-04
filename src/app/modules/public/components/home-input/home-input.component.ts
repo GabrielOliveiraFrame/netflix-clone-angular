@@ -13,13 +13,15 @@ import { FormValidations } from 'src/app/shared/validators/form-validations';
 export class HomeInputComponent implements OnInit {
 
   public signUpForm!: FormGroup;
-
+  public email:any;
   constructor(private formbuilder: FormBuilder, private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.creatForm();
   }
   signUp(){
+    this.email = this.signUpForm.get('email').value;
+    sessionStorage.setItem('email', this.email);
     this.router.navigate(['/public/signUp']);
   }
   creatForm(){

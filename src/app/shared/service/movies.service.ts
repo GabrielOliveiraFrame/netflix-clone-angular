@@ -13,7 +13,7 @@ export class MoviesService {
 
   getByGenre(genre: number){
     return this.http.get(`${environment.API_MOVIES_DISCOVER}?api_key=${environment.API_KEY}&language=pt-br&with_genres=${genre}&page=1`);
-  }
+  }  
 
   getPopular(){
     return this.http.get(`${environment.API_MOVIES}/popular?api_key=${environment.API_KEY}&language=pt-br&page=1`);
@@ -22,4 +22,14 @@ export class MoviesService {
   getTopRated(){
     return this.http.get(`${environment.API_MOVIES}/top_rated?api_key=${environment.API_KEY}&language=pt-br&page=1`);
   }
+
+  getDetais(id: number){
+    return this.http.get(`${environment.API_MOVIES}/${id}?api_key=${environment.API_KEY}&language=pt-br`);
+  }
+
+  getVideos(id: number){
+    return this.http.get(`${environment.API_MOVIES}/${id}/videos?api_key=${environment.API_KEY}&language=pt-br`);
+  }
+
+   
 }

@@ -1,8 +1,15 @@
-<div class="content bg-transparent">
+<div class="content position-relative bg-transparent" id="content">
   <h4 class="ml-2 py-2 text-light title-text"><strong>{{title}}</strong></h4>
-  <carousel [cellsToScroll]="1" [objectFit]="'cover'" [cellWidth]="250" [height]="150" arrowsTheme='dark' lightDOM='true'>
-    <div class="carousel-cell" *ngFor="let movie of movies">
-        <img src="https://image.tmdb.org/t/p/w300{{movie.backdrop_path}}">
+  <carousel [objectFit]="'cover'" [cellWidth]="230" [height]="150" arrowsTheme='dark' lightDOM='true'
+    [cellsToScroll]="7">
+    <div class="carousel-cell" *ngFor="let movie of movies; let i = index">
+      <img [attr.id]="i+movie.id"  src="https://image.tmdb.org/t/p/w300{{movie.backdrop_path}}" 
+      (mouseenter)="toggleModalTrue()" (mouseenter)="setHoverId(movie.id)" (mouseenter)="cardPosition(i+movie.id)">
     </div>
   </carousel>
+  <div (mouseenter)="toggleModalTrue()" (mouseleave)="toggleModalFalse()" *ngIf="cardExibido === genre">
+    <app-modal Id={{movieHoverId}} id="position" *ngIf="qualquer === true" class="position-absolute cardFilm"></app-modal>
+  </div>
 </div>
+
+

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, JsonpClientBackend } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -60,5 +60,10 @@ export class SignUpCardComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       senha: ['', [Validators.required, Validators.maxLength(50), Validators.minLength(5)]]
     })
+
+    if (sessionStorage.getItem('email') !== null){
+      let emailValue = sessionStorage.getItem('email');
+      this.signUpForm.patchValue({email:emailValue})
+    }
   }
 }

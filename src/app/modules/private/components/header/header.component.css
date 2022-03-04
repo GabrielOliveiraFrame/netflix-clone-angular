@@ -23,36 +23,23 @@ background: #0a0a0a;
 .btn-search {
     z-index: 1;
     color: #fff;
-    margin-right: 20px;
+    margin-right: 15px;
     font-size: 18px;
 }
 
-.btn-search:focus~input {
-    transform: translate(4px 3px);
-    width: 50px;
-    height: 50px;
-}
 
 .btn-bell {
     z-index: 1;
     color: #fff;
-    margin-right: 20px;
-    font-size: 22px;
+    margin-right: 15px;
+    font-size: 20px;
 }
 
 .btn-user {
     z-index: 1;
     color: #fff;
     margin-right: 20px;
-    font-size: 22px;
-}
-
-.input-search {
-    position: absolute;
-    width: 0;
-    height: 0;
-    padding: 0;
-    z-index: 0;
+    font-size: 35px;
 }
 
 .form-size {
@@ -68,13 +55,15 @@ background: #0a0a0a;
 }
 
 .first-section {
-    background-image:
-        url(https://occ-0-5484-1380.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQnqkRh551B6kQvrHc-mW84mN3n8ojSmp9apY8kNPf3rdcRKNkjrJk0PsSAXgFcLGrbOr91Xgma8YK1FSChMaShJdmRm.jpg?r=454);
+    background-image: linear-gradient(to bottom, transparent 0%, rgb(0, 0, 0)160%),
+    url("https://www.themoviedb.org/t/p/original/2Sm3asuwKVNTzgm2nF6hp5mwEfh.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 .texto-filme {
+    margin-top: 30px;
     width: 500px;
     margin-left: 60px;
     color: #fff;
@@ -104,25 +93,31 @@ background: #0a0a0a;
 button{
     margin-top: 15px;
 }
+.button-div{
+    display: flex;
+}
 .button-trailer{
     width: 150px;
     height: 50px;
-    font-size: 1.6rem;
-    border-radius: 5px;    
+    font-size: 1.2rem;
+    border-radius: 5px; 
+    margin-right: 30px;   
 }
 .button-trailer:hover{
     opacity: 0.7;
 }
 
 .button-plus{
-    margin-left: 20px;
+    display: flex;
+    align-items: center;
     width: 250px;
     height: 50px;
     font-size: 1.4rem;
     border-radius: 5px;
+    justify-content: center;
 }
 
-.button-plus:hover{
+.button-plus:hover{ 
     opacity: 0.7;
 }
 
@@ -132,14 +127,26 @@ button{
 
 .icon-plus{
     margin-right: 5px;
-    
 }
 
 .icon-plus{
     
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     width: 30px;
     height: 30px;
     border: 3px solid black;
     border-radius: 20px;
+}
+
+.filmes-div{
+    margin-top: -180px;
+}
+
+.filmes-card{
+    margin-bottom: 50px;
+}
+
+.dropdown-menu{
+    background-color: #0a0a0a;
+
 }
