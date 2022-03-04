@@ -9,6 +9,11 @@
         <h2 class="card-title mb-4 text-light">Entrar</h2>
 
         <form [formGroup]="form">
+
+          <div class="alert bg-danger text-light" role="alert" *ngIf="logErr">
+            Email e/ou senha incorretos!
+          </div>
+
           <div class="form-group">
             <input type="text" class="form-control form-control-lg text-white" id="email"
             placeholder="Email" formControlName="email">
@@ -24,8 +29,13 @@
             [control]="form.get('senha')"></app-err-msg>
           </div>
 
-          <button type="submit" class="btn btn-danger btn-lg w-100 mb-2" (click)="submit()">
+          <button type="submit" class="btn btn-danger btn-lg w-100 mb-2"
+          (click)="submit()" *ngIf="!loading">
             <strong>Entrar</strong>
+          </button>
+
+          <button class="btn btn-danger btn-lg w-100 mb-2" type="button" disabled *ngIf="loading">
+            <span class="spinner-border" role="status" aria-hidden="true"></span>
           </button>
 
           <div class="form-recurses d-flex justify-content-between">
@@ -49,7 +59,8 @@
         </div>
 
         <div class="signUp-call my-4">
-          <h6 class="text-muted">Novo por aqui? <a href="" class="text-white">Assine Agora</a></h6>
+          <h6 class="text-muted">Novo por aqui? <a href="" class="text-white"
+            (click)="$event.preventDefault()" (click)="navigateHome()">Assine Agora</a></h6>
         </div>
 
         <div class="protect-info">
