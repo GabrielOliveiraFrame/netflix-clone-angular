@@ -5,26 +5,25 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginGuard implements CanActivate, CanLoad {
-
+export class RedirectPrivateGuard implements CanActivate, CanLoad {
   constructor(private router: Router) { }
-  
+
   canLoad(route: Route, segments: UrlSegment[]): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
     return this.checkUserLogged();
   }
 
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean>  | boolean  {
-      return this.checkUserLogged();
+    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    return this.checkUserLogged();
   }
 
   checkUserLogged(){
     if(sessionStorage.getItem('usuario') || localStorage.getItem('usuario')){
-      return true;
-    } else {
-      this.router.navigate(['public/login']);
+      this.router.navigate(['/private/home']);
       return false;
+    } else {
+      return true;
     }
   }
 

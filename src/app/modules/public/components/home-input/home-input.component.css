@@ -8,27 +8,28 @@ label {
 
 h3 {
     display: block;
-    font-size: 1.17em;
+    font-size: 1.1em;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
 .inputError{
     color: #ffa00a;
 }
+
 .email-input {
     width: 500px;
-    height: 70px;
+    height: 65px;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
+    border: 1px solid #fff;
 }
 
 .btn {
-    margin-top: 5px;
     width: 200px;
-    height: 70px;
-    margin-top: 0px;
+    height: 65px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-top-right-radius: 2px;

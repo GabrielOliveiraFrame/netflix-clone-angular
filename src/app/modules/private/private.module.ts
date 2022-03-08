@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { PrivateRoutingModule } from './private-routing.module';
 import { CardsSliderComponent } from './components/cards-slider/cards-slider.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
 import { DetailsClickComponent } from './components/details-click/details-click.component';
 import { SimilarCardComponent } from './components/similar-card/similar-card.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 import {LOCALE_ID} from '@angular/core';
 import { registerLocaleData } from '@angular/common';
@@ -14,7 +15,7 @@ registerLocaleData(localePt);
 
 
 @NgModule({
-  declarations: [HeaderComponent, CardsSliderComponent, DetailsClickComponent, SimilarCardComponent],
+  declarations: [HomeComponent, CardsSliderComponent, DetailsClickComponent, SimilarCardComponent, ModalComponent],
   imports: [
     CommonModule,
     PrivateRoutingModule,

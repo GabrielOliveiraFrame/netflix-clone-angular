@@ -1,0 +1,37 @@
+<div class="card" *ngIf="movie">
+    <iframe *ngIf="safeUrl" [src]='safeUrl'
+    frameborder="0" allowfullscreen allow="autoplay; encrypted-media">
+    </iframe>
+    <img *ngIf="!safeUrl" src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}">
+    <div class="card-body">
+        <div class="movie-title">
+            {{movie.title}}
+        </div>
+        <div>
+            <button class="button-Card"><i class="fa-solid fa-play"></i></button>
+            <button class="button-Card"><i class="fa-solid fa-plus"></i></button>
+            <button class="button-Card"><i class="fa-solid fa-thumbs-up"></i></button>
+            <button class="button-Card"><i class="fa-solid fa-thumbs-down"></i></button>
+            <button class="button-Card" (click)="iconClicked()" data-toggle="modal" data-target="#modalMovie">
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+        </div>
+        <div class="d-flex">
+            <div class="movie-Vote" [class.text-success]="movie.vote_average >= 6"
+              [class.text-warning]="movie.vote_average < 6" [class.text-danger]="movie.vote_average <= 4">
+                {{movie.vote_average}}
+            </div>
+            <div class="movie-Rating">
+                <i class="fa-solid fa-l"></i>
+            </div>
+            <div class="movie-Runtime">
+                {{convertHour(movie.runtime)}}
+            </div>
+        </div>
+        <span *ngFor="let genre of movie.genres; let i = index">
+            {{genre.name}}<span [ngClass]="{'virgula': i === movie.genres.length-1}">,</span>
+        </span>
+    </div>
+</div>
+
+

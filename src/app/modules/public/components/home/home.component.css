@@ -88,32 +88,56 @@ label {
   min-height: 65vh;
 }
 .plus-Button{
+  border: none;
+  color: #fff;
+  background-color:#303030;
   margin-left: 500px;
 }
 
-.btn-toggle:focus > .plus-Button{
-  transition: .1s;
-  transform:rotate(45deg) ;
-}
-
 .plus-Button2{
+  border: none;
+  color: #fff;
+  background-color:#303030;
   margin-left: 437px;
 }
+
 .plus-Button3{
+  border: none;
+  color: #fff;
+  background-color:#303030;
   margin-left: 471px;
 }
+
 .plus-Button4{
-  margin-left: 401px;
+  border: none;
+  color: #fff;
+  background-color:#303030;
+  margin-left: 406px;
 }
+
 .plus-Button5{
+  border: none;
+  color: #fff;
+  background-color:#303030;
   margin-left: 300px;
 }
+
 .plus-Button6{
+  border: none;
+  color: #fff;
+  background-color:#303030;
   margin-left: 285px;
 }
+
 @media(max-width: 1199px){
   .text-group{
     text-align: center;
   }
 }
+
+button:not(.collapsed) > button {
+  transition: .1s;
+  transform:rotate(45deg) ;
+}
+
 

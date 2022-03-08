@@ -3,7 +3,7 @@
 }
 
 .card .card-img-top{
-  height: 150px;
+  min-height: 20vh;
 }
 
 .card-body .title{
