@@ -10,11 +10,6 @@ h4{
 }
 
 .carousel-cell {
-  margin-left: 45px !important;
-}
-
-.carousel-arrows {
-  position: absolute;
-  z-index: 9999999999999999;
+  margin-left: 60px !important;
 }
 
