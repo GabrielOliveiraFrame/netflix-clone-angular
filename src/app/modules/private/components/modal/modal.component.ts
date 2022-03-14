@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
 import { DomSanitizer} from '@angular/platform-browser';
 import { MoviesService } from 'src/app/shared/service/movies.service';
 
@@ -8,12 +8,15 @@ import { MoviesService } from 'src/app/shared/service/movies.service';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnChanges{
-  
+
   @Input()
   Id: number;
 
   movie:any;
   safeUrl: any;
+
+  @Output()
+  moreClicked = new EventEmitter();
 
   constructor(
     private moviesService: MoviesService,
@@ -21,10 +24,10 @@ export class ModalComponent implements OnChanges{
     ) { }
 
   ngOnChanges(): void {
-  
+
     this.getMoviesDetails();
     this.getTrailer();
-    
+
   }
 
   getMoviesDetails(){
@@ -34,7 +37,7 @@ export class ModalComponent implements OnChanges{
   }
 
   convertHour(minutos:any){
-    const horas = Math.floor(minutos/ 60);          
+    const horas = Math.floor(minutos/ 60);
     const min = minutos % 60;
     const textoHoras = (`00${horas}`).slice(-2);
     const textoMinutos = (`00${min}`).slice(-2);
@@ -42,11 +45,11 @@ export class ModalComponent implements OnChanges{
   }
 
   getTrailer(){
-    
+
     this.moviesService.getVideos(this.Id).subscribe((data: any) => {
       this.safeUrl = undefined;
       let continues = true;
-      
+
       data.results.forEach(video => {
         if(video.type == 'Trailer' || video.type == 'Teaser' && continues == true){
           const url = `https://www.youtube.com/embed/${video.key}?autoplay=1&showinfo=0&controls=0`
@@ -55,6 +58,10 @@ export class ModalComponent implements OnChanges{
         }
       });
     })
+  }
+
+  iconClicked(){
+    this.moreClicked.emit(true);
   }
 
 }

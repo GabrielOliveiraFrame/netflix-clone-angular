@@ -23,11 +23,14 @@ export class CardsSliderComponent implements OnInit {
   @Input()
   type: string;
 
+  @Output()
+  moreClicked = new EventEmitter();
+
   movies: any;
 
   movieHoverId:any;
 
-  qualquer:boolean = false;
+  showCard:boolean = false;
 
   ident:string;
 
@@ -37,18 +40,11 @@ export class CardsSliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMovies();
-    this.creatId;
   }
 
   getMovies(){
-<<<<<<< HEAD
-    this.type === 'genre' ? this.getMoviesByGenre() : this.type ===
-    'popular' ? this.getMoviesPopular() : this.getMoviesTopRated();
-
-=======
     this.type === 'genre' ? this.getMoviesByGenre() : this.type === 'popular' ?
     this.getMoviesPopular() : this.getMoviesTopRated();
->>>>>>> 42a2077b65a4dd707d70d439a93535757e5720a5
   }
 
   getMoviesByGenre(){
@@ -57,48 +53,54 @@ export class CardsSliderComponent implements OnInit {
     });
   }
 
-<<<<<<< HEAD
-  getMoviesTopRated(){
-    this.moviesService.getTopRated().subscribe((data: any) => {
-=======
   getMoviesPopular(){
     this.moviesService.getPopular().subscribe((data: any) => {
->>>>>>> 42a2077b65a4dd707d70d439a93535757e5720a5
       this.movies = data.results;
     });
   }
 
-<<<<<<< HEAD
-  getMoviesPopular(){
-    this.moviesService.getPopular().subscribe((data: any) => {
-=======
   getMoviesTopRated(){
     this.moviesService.getTopRated().subscribe((data: any) => {
->>>>>>> 42a2077b65a4dd707d70d439a93535757e5720a5
       this.movies = data.results;
     });
   }
+
   setHoverId(id:any){
-    this.movieHoverId = id;  
+    this.movieHoverId = id;
   }
-  creatId(id:any, i:any){
-    this.ident = `${i}${id}`;
-    return this.ident;
-  }
+
   toggleModalTrue(){
-    this.qualquer = true;
+    this.showCard = true;
     this.cardAtivado.emit(this.genre);
   }
+
   toggleModalFalse(){
-    this.qualquer = false;
+    this.showCard = false;
   }
 
   cardPosition(i:any){
-    let position = document.getElementById(i);
-    console.log(position);
-    let pos = position.getBoundingClientRect();
-    let cardPos = document.getElementById('position');    
-    let posCard = String(pos.x)+'px';
-    cardPos.style.marginLeft = posCard;
+    const position = document.getElementById(i);
+    const pos = position.getBoundingClientRect();
+    const cardPos = document.getElementById('position');
+
+    const arrowNext = document.querySelector('.carousel-arrow-next');
+    const arrowNextPos = arrowNext.getBoundingClientRect();
+
+    const arrowPrev = document.querySelector('.carousel-arrow-prev');
+    const arrowPrevPos = arrowPrev.getBoundingClientRect();
+
+    if(arrowNextPos.x >= pos.left && arrowNextPos.x <= pos.right ||
+      arrowPrevPos.x >= pos.left && arrowPrevPos.x <= pos.right){
+      cardPos.style.display = 'none';
+    } else {
+      const posCard = String(pos.x)+'px';
+      cardPos.style.display = 'block';
+      cardPos.style.marginLeft = posCard;
+    }
+
+  }
+
+  onMoreClicked(id: any){
+    this.moreClicked.emit(id);
   }
 }

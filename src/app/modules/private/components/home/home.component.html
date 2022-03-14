@@ -1,0 +1,60 @@
+<div class="content">
+  <div class="w-100 min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-nav nav-bar fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="logo" class="logo">
+      </a>
+      <button class="navbar-toggler mt-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav w-100 d-flex justify-content-between">
+          <div class="navbar-nav nav-links">
+            <a class="nav-link active" href="#"><strong>Início</strong></a>
+            <a class="nav-link active" href="#">Filmes</a>
+            <a class="nav-link active" href="#">Bombando</a>
+            <a class="nav-link active">Minha Lista</a>
+          </div>
+
+          <div class="user-feat d-lg-flex align-items-center">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <div>
+              <i class="fa-solid fa-bell btn-bell"></i>
+            </div>
+            <div class="dropdown">
+              <i class="fa-solid fa-address-card btn-user" data-toggle="dropdown" data-offset="90,90"></i>
+              <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="dropdownMenuLink">
+                <button class="btn btn-danger" (click)="resetStorage()">Sair</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="first-section">
+      <div class="d-flex flex-column texto-filme">
+        <span class="titulo-filme">ENCANTO</span>
+        <h1 class="lançamento-filme">O lançamento é em Março</h1>
+        <span class="sinopse">Uma garota chamada Mirabel Madrigal cresce como o único membro não mágico de sua família,
+          que vivem escondidos em uma vibrante casa encantada nas montanhas da Colômbia.</span>
+        <div class="button-div">
+          <button class="button-trailer" (click)="mainMovieClick()" data-toggle="modal" data-target="#modalMovie">
+            <i class="fa-solid fa-play icon-trailer"></i>Trailer</button>
+          <button class="button-plus" (click)="mainMovieClick()" data-toggle="modal" data-target="#modalMovie">
+            <i class="fa-solid fa-info icon-plus mr-3"></i>Mais Informações</button>
+        </div>
+      </div>
+    </div>
+    <div class="filmes-div">
+      <div class="filmes-card">
+        <app-cards-slider (cardAtivado)="onCardAtivado($event)" cardExibido={{cardVisto}}
+          title="Filmes Melhores Avaliados" genre="topRated" (moreClicked)="onMoreClicked($event)"></app-cards-slider>
+      </div>
+      <div *ngFor="let genre of generos" class="filmes-card">
+        <app-cards-slider (cardAtivado)="onCardAtivado($event)" cardExibido={{cardVisto}} title={{genre.title}}
+          genre={{genre.id}} type="genre" (moreClicked)="onMoreClicked($event)"></app-cards-slider>
+      </div>
+    </div>
+  </div>
+  <app-details-click *ngIf="showDetails"  [movieId]="movieClickedId" class="detail-modal"></app-details-click>
+</div>

@@ -1,7 +1,7 @@
 {
   "Users": [
     {
-      "email": "olá@olá",
+      "email": "ola@ola",
       "password": "123456",
       "id": 1
     },
@@ -34,6 +34,11 @@
       "email": "leooe@leoo",
       "senha": "exSPcU9Yz5hekQ9",
       "id": 7
+    },
+    {
+      "email": "teste@teste.com",
+      "senha": "12345",
+      "id": 8
     }
   ]
 }

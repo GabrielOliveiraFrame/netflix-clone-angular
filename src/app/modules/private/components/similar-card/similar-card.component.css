@@ -1,0 +1,31 @@
+.card{
+  background-color: rgb(54, 54, 54);
+}
+
+.card .card-img-top{
+  min-height: 20vh;
+}
+
+.card-body .title{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-body .livre-icon{
+  width: 25px;
+}
+
+.card-body .circle-btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgb(188, 204, 255);
+  background-color: rgb(36, 36, 36, 0.5);
+  cursor: pointer;
+}
+
+.card-body .btn-icon{
+  font-size: 20px;
+  color: #fff;
+}

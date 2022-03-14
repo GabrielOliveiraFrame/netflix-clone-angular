@@ -94,64 +94,50 @@ label {
   margin-left: 500px;
 }
 
-.btn-toggle:focus > .plus-Button{
-  transition: .1s;
-  transform:rotate(45deg) ;
-}
-
 .plus-Button2{
   border: none;
   color: #fff;
   background-color:#303030;
   margin-left: 437px;
 }
-.btn-toggle:focus > .plus-Button2{
-  transition: .1s;
-  transform:rotate(45deg) ;
-}
+
 .plus-Button3{
   border: none;
   color: #fff;
   background-color:#303030;
   margin-left: 471px;
 }
-.btn-toggle:focus > .plus-Button3{
-  transition: .1s;
-  transform:rotate(45deg) ;
-}
+
 .plus-Button4{
   border: none;
   color: #fff;
   background-color:#303030;
   margin-left: 406px;
 }
-.btn-toggle:focus > .plus-Button4{
-  transition: .1s;
-  transform:rotate(45deg) ;
-}
+
 .plus-Button5{
   border: none;
   color: #fff;
   background-color:#303030;
   margin-left: 300px;
 }
-.btn-toggle:focus > .plus-Button5{
-  transition: .1s;
-  transform:rotate(45deg) ;
-}
+
 .plus-Button6{
   border: none;
   color: #fff;
   background-color:#303030;
   margin-left: 285px;
 }
-.btn-toggle:focus > .plus-Button6{
-  transition: .1s;
-  transform:rotate(45deg) ;
-}
+
 @media(max-width: 1199px){
   .text-group{
     text-align: center;
   }
 }
+
+button:not(.collapsed) > button {
+  transition: .1s;
+  transform:rotate(45deg) ;
+}
+
 
