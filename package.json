@@ -58,6 +58,9 @@
         "tsconfig": "<rootDir>/tsconfig.spec.json",
         "stringifyContentPathRegex": "\\.html$"
       }
-    }
+    },
+    "modulePaths": [
+      "<rootDir>"
+    ]
   }
 }

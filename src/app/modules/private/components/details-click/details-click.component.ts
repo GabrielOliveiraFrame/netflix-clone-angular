@@ -39,10 +39,10 @@ export class DetailsClickComponent implements OnChanges {
     this.moviesService.getVideos(this.movieId).subscribe((data: any) => {
       let continues = true;
       data.results.forEach(video => {
-        if(video.type == 'Trailer' || video.type == 'Teaser' && continues == true){
-          const url = `https://www.youtube.com/embed/${video.key}?autoplay=1&showinfo=0&controls=0`
-          this.safeUrl = this.domSani.bypassSecurityTrustResourceUrl(url);
+        if((video.type == 'Trailer' || video.type == 'Teaser') && continues == true){
+          const url = `https://www.youtube.com/embed/${video.key}?autoplay=1&showinfo=0&controls=0`;
           continues = false;
+          this.safeUrl = this.domSani.bypassSecurityTrustResourceUrl(url);
         }
       });
     })
