@@ -68,7 +68,7 @@
           <small class="d-block mb-3">
             Esta página é protegida pelo Google reCAPTCHA para garantir que você não é
             um robô. <a href="" *ngIf="!activeText" (click)="$event.preventDefault()"
-            (click)="toogleText()">Saiba mais.</a>
+            (click)="toogleText()" class="toggleBtn">Saiba mais.</a>
           </small>
 
           <small *ngIf="activeText">
