@@ -15,6 +15,7 @@ export class SignUpCardComponent implements OnInit {
   constructor(private router: Router, private formbuilder: FormBuilder, private http: HttpClient, private userService: UserService) { }
   public signUpForm!: FormGroup;
   public cont:number = 0;
+  logErr = false;
 
   ngOnInit(): void {
     this.formBuilder();
@@ -42,6 +43,7 @@ export class SignUpCardComponent implements OnInit {
        console.log(result);
         if(result.length !== 0){
           alert("Esse usuário já esta cadastrado");
+          this.logErr = true;
         }else{
           this.userService.postUser(this.signUpForm.value).subscribe({
             next: (data:any) =>{
@@ -51,6 +53,7 @@ export class SignUpCardComponent implements OnInit {
         }
       }, error: (err: any) => {
         alert('Erro de servidor, tente novamente!');
+        this.logErr = true;
       }
     })
   }

@@ -45,8 +45,10 @@ export class HomeComponent implements OnInit {
   }
 
   resetStorage(){
+    
     sessionStorage.removeItem('usuario');
     localStorage.removeItem('usuario');
+    
     this.returnLogin();
   }
 

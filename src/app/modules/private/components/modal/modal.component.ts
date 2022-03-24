@@ -18,16 +18,15 @@ export class ModalComponent implements OnChanges{
   @Output()
   moreClicked = new EventEmitter();
 
+  hour: any;
   constructor(
     private moviesService: MoviesService,
     private domSani: DomSanitizer
     ) { }
 
   ngOnChanges(): void {
-
     this.getMoviesDetails();
     this.getTrailer();
-
   }
 
   getMoviesDetails(){
@@ -41,6 +40,7 @@ export class ModalComponent implements OnChanges{
     const min = minutos % 60;
     const textoHoras = (`00${horas}`).slice(-2);
     const textoMinutos = (`00${min}`).slice(-2);
+    this.hour = `${textoHoras}h ${textoMinutos}min`;
     return `${textoHoras}h ${textoMinutos}min`;
   }
 
