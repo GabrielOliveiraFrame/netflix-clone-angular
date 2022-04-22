@@ -1,6 +1,6 @@
-<div>
-    <h3 class="email-form-title">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
-    <form class="contac-form email-form d-inline-flex" [formGroup]="signUpForm">
+<div class="content">
+    <h3 class="email-form-title">{{'HOME_INPUT.TITLE' | translate}}</h3>
+    <form class="contac-form email-form d-flex" [formGroup]="signUpForm">
         <div clas="email-form-lockup">
             <ul>
                 <li>
@@ -14,11 +14,11 @@
                 </li>
             </ul>
         </div>
-        <div>
+        <span>
             <button (click)="submit()" class="btn" type="button">
-                <span id="" class="cta-btn-txt">Vamos lá
+                <span id="" class="cta-btn-txt"> {{'HOME_INPUT.SUBMIT_BTN' | translate}}
                     &gt;</span>
             </button>
-        </div>
+        </span>
     </form>
 </div>

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
 import { DomSanitizer} from '@angular/platform-browser';
+import { AnalyticsService } from 'src/app/shared/service/analytics.service';
 import { MoviesService } from 'src/app/shared/service/movies.service';
 
 @Component({
@@ -21,7 +22,8 @@ export class ModalComponent implements OnChanges{
   hour: any;
   constructor(
     private moviesService: MoviesService,
-    private domSani: DomSanitizer
+    private domSani: DomSanitizer,
+    private analyticsService: AnalyticsService
     ) { }
 
   ngOnChanges(): void {
@@ -62,6 +64,7 @@ export class ModalComponent implements OnChanges{
 
   iconClicked(){
     this.moreClicked.emit(true);
+    this.analyticsService.eventEmitter('details_click', this.movie.title);
   }
 
 }

@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { MoviesService } from 'src/app/shared/service/movies.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,24 +10,25 @@ export class HomeComponent implements OnInit {
 
   cardVisto = false;
 
-  generos = [
-    {id: 99, title: "Documentários"},
-    {id: 12, title: "Filmes de Aventura"},
-    {id: 35, title: "Filmes de Comédia"},
-    {id: 16, title: "Animações"},
-    {id: 80, title: "Filmes de Crime"},
-    {id: 28, title: "Filmes de Ação"},
-    {id: 18, title: "Filmes de Drama"}
-  ];
+  generos: any;
 
   movieClickedId: number;
   showDetails: boolean = false;
 
   constructor(
-    private router: Router
+    private moviesService: MoviesService
   ) { }
 
   ngOnInit(): void {
+    this.getGenres();
+  }
+
+  getGenres(){
+    this.moviesService.getGenres().subscribe(
+      (data: any) => {
+        this.generos = data.genres;
+      }
+    );
   }
 
   onCardAtivado(event:any){
@@ -43,17 +44,4 @@ export class HomeComponent implements OnInit {
     this.movieClickedId = 568124;
     this.showDetails = true;
   }
-
-  resetStorage(){
-    
-    sessionStorage.removeItem('usuario');
-    localStorage.removeItem('usuario');
-    
-    this.returnLogin();
-  }
-
-  returnLogin(){
-    this.router.navigate(['public/login']);
-  }
-
 }

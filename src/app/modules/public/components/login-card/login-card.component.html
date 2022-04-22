@@ -7,12 +7,12 @@
 
     <div class="card mx-auto mt-5 pt-3">
       <div class="card-body col-md-10 mx-auto">
-        <h2 class="card-title mb-4 text-light">Entrar</h2>
+        <h2 class="card-title mb-4 text-light">{{'LOGIN.TITLE' | translate}}</h2>
 
         <form [formGroup]="form">
 
           <div class="alert bg-danger text-light" role="alert" *ngIf="logErr">
-            Email e/ou senha incorretos!
+            {{'LOGIN.CREDENTIALS_ERR' | translate}}
           </div>
 
           <div class="form-group">
@@ -24,15 +24,15 @@
           </div>
           <div class="form-group mb-5">
             <input type="password" class="form-control form-control-lg text-white" id="senha"
-            placeholder="Senha" autocomplete="off" formControlName="senha">
+            [placeholder]="'LOGIN.PASSWORD_LABEL' | translate" autocomplete="off" formControlName="senha">
 
-            <app-err-msg *ngIf="!form.valid" fieldName="senha"
+            <app-err-msg *ngIf="!form.valid" [fieldName]="'FIELD_NAMES.PASSWORD' | translate"
             [control]="form.get('senha')"></app-err-msg>
           </div>
 
           <button type="submit" class="btn btn-danger btn-lg w-100 mb-2"
           (click)="submit()" *ngIf="!loading">
-            <strong>Entrar</strong>
+            <strong>{{'LOGIN.TITLE' | translate}}</strong>
           </button>
 
           <button class="btn btn-danger btn-lg w-100 mb-2" type="button" disabled *ngIf="loading">
@@ -43,12 +43,12 @@
             <div class="form-group form-check d-flex align-items-center">
               <input type="checkbox" class="form-check-input" id="remember" formControlName="remember">
               <label class="form-check-label" for="remember">
-                <small class="form-text">Lembre-se de mim</small>
+                <small class="form-text">{{'LOGIN.REMEMBER' | translate}}</small>
               </label>
             </div>
 
             <a href="https://www.netflix.com/br/LoginHelp" class="text-muted" target="blank">
-              <small>Precisa de ajuda?</small>
+              <small>{{'LOGIN.HELP' | translate}}</small>
             </a>
           </div>
         </form>
@@ -56,28 +56,23 @@
         <div class="face-conect d-flex mt-2">
           <img src="https://assets.nflxext.com/ffe/siteui/login/images/FB-f-Logo__blue_57.png"
           alt="facebook" class="face-logo mr-2">
-          <small class="text-muted">Conectar com o Facebook</small>
+          <small class="text-muted">{{'LOGIN.FACEBOOK' | translate}}</small>
         </div>
 
         <div class="signUp-call my-4">
-          <h6 class="text-muted">Novo por aqui? <a href="" class="text-white"
-            (click)="$event.preventDefault()" (click)="navigateHome()">Assine Agora</a></h6>
+          <h6 class="text-muted">{{'LOGIN.NEW' | translate}} <a href="" class="text-white"
+            (click)="$event.preventDefault()" (click)="navigateHome()">
+            {{'LOGIN.SIGN_UP' | translate}}</a></h6>
         </div>
 
         <div class="protect-info">
           <small class="d-block mb-3">
-            Esta página é protegida pelo Google reCAPTCHA para garantir que você não é
-            um robô. <a href="" *ngIf="!activeText" (click)="$event.preventDefault()"
-            (click)="toogleText()" class="toggleBtn">Saiba mais.</a>
+            {{'LOGIN.MORE_TEXT' | translate}}
+            <a href="" *ngIf="!activeText" (click)="$event.preventDefault()"
+            (click)="toogleText()" class="toggleBtn"> {{'LOGIN.MORE_BTN' | translate}} </a>
           </small>
 
-          <small *ngIf="activeText">
-            As informações recolhidas pelo Google reCAPTCHA estão sujeitas à
-            <a href="https://policies.google.com/privacy" target="blank">Política de Privacidade</a>
-            e <a href="https://policies.google.com/terms" target="blank">Termos de Uso</a>,
-            e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e
-            por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google).
-          </small>
+          <small *ngIf="activeText" [innerHTML]="'LOGIN.ADDITIONAL_INFO' | translate"></small>
         </div>
       </div>
     </div>

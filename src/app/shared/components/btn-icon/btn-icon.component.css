@@ -1,0 +1,13 @@
+.circle-btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgb(188, 204, 255);
+  background-color: rgb(36, 36, 36, 0.5);
+  cursor: pointer;
+}
+
+.btn-icon{
+  font-size: 20px;
+  color: #fff;
+}

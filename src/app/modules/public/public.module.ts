@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicRoutingModule } from './public-routing.module';
@@ -18,6 +19,7 @@ import { PrivateRoutingModule } from '../private/private-routing.module';
     SharedComponentsModule,
     FormsModule,
     ReactiveFormsModule,
+    TranslateModule
   ]
 })
 export class PublicModule { }

@@ -10,7 +10,7 @@
                     <li class="nav-item">
                         <button type="button" class="btn btn-light btn-navigate" (click)="navigateLogin()">
 
-                            <span class="nav-text">Entrar</span>
+                            <span class="nav-text">{{'SIGN_UP.LOGIN_BTN' | translate}}</span>
 
                         </button>
                     </li>
@@ -25,20 +25,22 @@
                                 src="https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Devices.png" alt="">
                         </span>
                         <span class="path-text-logo">
-                            PASSO 1 DE
+                            {{'SIGN_UP.LEVEL' | translate:{'value': '1'} }}
                             <Strong><span>3</span></Strong>
                         </span>
                     </div>
                     <div>
                         <h1>
-                            Termine de configurar sua conta
+                            {{'SIGN_UP.FIRST_SECTION_TITLE' | translate}}
                         </h1>
                     </div>
                     <div>
-                        <span class="path-text">A Netflix é personalizada para você. Crie uma senha para assistir em
-                            qualquer aparelho quando quiser.
+                        <span class="path-text">
+                            {{'SIGN_UP.FIRST_SECTION_PARAGRAPH' | translate}}
                         </span>
-                        <button (click)="navigateNext()" class="path-button">Proxímo</button>
+                        <button (click)="navigateNext()" class="path-button">
+                            {{'SIGN_UP.FIRST_SECTION_BTN' | translate}}
+                        </button>
                     </div>
                 </div>
             </div>
@@ -59,7 +61,9 @@
                     <li class="nav-item">
                         <button type="button" class="btn btn-light btn-navigate" (click)="navigateLogin()">
 
-                            <span class="nav-text">Entrar</span>
+                            <span class="nav-text">
+                              {{'SIGN_UP.LOGIN_BTN' | translate}}
+                            </span>
 
                         </button>
                     </li>
@@ -70,21 +74,22 @@
                 <div class="card2">
                     <div class="logo-path2">
                         <span class="path-text-logo2">
-                            PASSO 1 DE
+                            {{'SIGN_UP.LEVEL' | translate:{'value': '2'} }}
                             <Strong><span>3</span></Strong>
                         </span>
                     </div>
                     <div>
                         <h1>
-                            Crie uma senha para iniciar sua assinatura
+                            {{'SIGN_UP.SECOND_SECTION_TITLE' | translate}}
                         </h1>
                     </div>
                     <div>
                         <span class="path-text2">
-                            Faltam só mais alguns passos!
+                            {{'SIGN_UP.SECOND_SECTION_PARAGRAPH_1' | translate}}
                         </span>
+                        <br>
                         <span class="path-text2">
-                            Nós também detestamos formulários.
+                            {{'SIGN_UP.SECOND_SECTION_PARAGRAPH_2' | translate}}
                         </span>
                         <div>
                             <form [formGroup]="signUpForm">
@@ -101,12 +106,16 @@
                                     <div class="label-float">
                                         <input type="password" placeholder=" " name="senha" class="senha-input"
                                             tabindex="0" formControlName='senha' autocomplete="password" />
-                                        <label>Adicione uma senha</label>
+                                        <label>
+                                            {{'SIGN_UP.SECOND_SECTION_PASSWORD_LABEL' | translate}}
+                                        </label>
                                     </div>
-                                    <app-err-msg *ngIf="!signUpForm.valid" fieldName="senha"
+                                    <app-err-msg *ngIf="!signUpForm.valid" [fieldName]="'FIELD_NAMES.PASSWORD' | translate"
                                         [control]="signUpForm.get('senha')"></app-err-msg>
                                 </div>
-                                <button type="button" (click)="navigateNext()" class="path-button2">Cadastrar</button>
+                                <button type="button" (click)="signUp()" class="path-button2">
+                                    {{'SIGN_UP.SECOND_SECTION_BTN' | translate}}
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -128,7 +137,9 @@
                     <li class="nav-item">
                         <button type="button" class="btn btn-light btn-navigate" (click)="navigateLogin()">
 
-                            <span class="nav-text">Entrar</span>
+                            <span class="nav-text">
+                              {{'SIGN_UP.LOGIN_BTN' | translate}}
+                            </span>
 
                         </button>
                     </li>
@@ -143,22 +154,30 @@
                                 src="https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Checkmark.png" alt="">
                         </span>
                         <span class="path-text-logo">
-                            PASSO 2 DE
+                            {{'SIGN_UP.LEVEL' | translate:{'value': '3'} }}
                             <Strong><span>3</span></Strong>
                         </span>
                     </div>
                     <div>
                         <h1>
-                            Comece o seu plano.
+                            {{'SIGN_UP.THIRD_SECTION_TITLE' | translate}}
                         </h1>
                     </div>
                     <div>
                         <ul class="lista-final">
-                        <li><i class="fa-solid fa-check"></i><span class="checkzinho">Sem compromisso, cancele quando quiser.</span></li>
-                        <li><i class="fa-solid fa-check"></i><span class="checkzinho">Todo o conteúdo da Netflix por um preço único e acessível.</span></li>
-                        <li><i class="fa-solid fa-check"></i><span class="checkzinho">Assista o quanto quiser em todos os seus aparelhos.</span></li>
+                        <li><i class="fa-solid fa-check"></i><span class="checkzinho">
+                            {{'SIGN_UP.THIRD_SECTION_ITEM_1' | translate}}
+                        </span></li>
+                        <li><i class="fa-solid fa-check"></i><span class="checkzinho">
+                            {{'SIGN_UP.THIRD_SECTION_ITEM_2' | translate}}
+                        </span></li>
+                        <li><i class="fa-solid fa-check"></i><span class="checkzinho">
+                            {{'SIGN_UP.THIRD_SECTION_ITEM_3' | translate}}
+                        </span></li>
                         </ul>
-                        <button (click)="signUp()" class="path-button3">Proxímo</button>
+                        <button (click)="navigateLogin()" class="path-button3">
+                            {{'SIGN_UP.THIRD_SECTION_BTN' | translate}}
+                        </button>
                     </div>
                 </div>
             </div>

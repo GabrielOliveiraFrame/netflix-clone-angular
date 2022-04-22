@@ -7,21 +7,24 @@
 
       <ul class="nav justify-content-end">
         <li class="nav-item mr-3">
-          <select class="form-control form-control-sm text-light bg-transparent">
-            <option class="bg-dark">Português</option>
-            <option class="bg-dark">Inglês</option>
+          <select class="form-control form-control-sm text-light bg-transparent" #selectedLanguage
+            (click)="useLanguage(selectedLanguage.value)">
+            <option class="bg-dark" value="pt-br">{{'PUBLIC_HOME.PT_OPTION' | translate}}</option>
+            <option class="bg-dark" value="en">{{'PUBLIC_HOME.EN_OPTION' | translate}}</option>
           </select>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-danger" (click)="navigateLogin()">Entrar</button>
+          <button type="button" class="btn btn-danger" (click)="navigateLogin()">
+            {{'PUBLIC_HOME.LOGIN_BTN'| translate}}
+          </button>
         </li>
       </ul>
     </nav>
 
     <div class="text-apresentation d-flex flex-column justify-content-center align-items-center">
       <div class="text-light text-center">
-        <h1 class="display-4"><strong>Filmes, séries e muito mais. <br>Sem limites.</strong></h1>
-        <h4>Assista onde quiser. Cancele quando quiser.</h4>
+        <h1 class="display-4" [innerHTML]="'PUBLIC_HOME.TITLE' | translate"></h1>
+        <h4>{{'PUBLIC_HOME.SUBTITLE'| translate}}</h4>
       </div>
       <app-home-input></app-home-input>
     </div>
@@ -31,9 +34,8 @@
     <div class="row justify-content-center">
       <div class="text-group text-light col-xl-6 d-flex align-items-center justify-content-center">
         <div class="px-5">
-          <h1 class="display-4 mb-4"><strong>Aproveite na TV.</strong></h1>
-          <h4>Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.
-          </h4>
+          <h1 class="display-4 mb-4"><strong>{{'PUBLIC_HOME.FIRST_SECTION_TITLE'| translate}}</strong></h1>
+          <h4>{{'PUBLIC_HOME.FIRST_SECTION_PARAGRAPH'| translate}}</h4>
         </div>
       </div>
 
@@ -56,7 +58,7 @@
               class="poster mr-2">
             <div class="text">
               <p class="text-light mb-0">Stranger Things</p>
-              <p class="mb-0 text-primary"> Download em andamento...</p>
+              <p class="mb-0 text-primary"> {{'PUBLIC_HOME.MOVIE_DOWNLOAD' | translate}}</p>
             </div>
           </div>
           <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif" alt="gif"
@@ -66,8 +68,8 @@
 
       <div class="text-group text-light col-xl-6 d-flex justify-content-center align-items-center">
         <div class="px-5">
-          <h1 class="display-4 mb-4"><strong>Baixe séries para assistir offline.</strong></h1>
-          <h4>Salve seus títulos favoritos e sempre tenha algo para assistir.</h4>
+          <h1 class="display-4 mb-4"><strong>{{'PUBLIC_HOME.SECOND_SECTION_TITLE' | translate}}</strong></h1>
+          <h4>{{'PUBLIC_HOME.SECOND_SECTION_PARAGRAPH' | translate}}</h4>
         </div>
       </div>
     </div>
@@ -77,8 +79,8 @@
     <div class="row justify-content-center">
       <div class="text-group text-light col-xl-6 d-flex align-items-center justify-content-center">
         <div class="px-5">
-          <h1 class="display-4 mb-4"><strong>Assista quando quiser.</strong></h1>
-          <h4>Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por isso.</h4>
+          <h1 class="display-4 mb-4"><strong>{{'PUBLIC_HOME.THIRD_SECTION_TITLE' | translate}}</strong></h1>
+          <h4>{{'PUBLIC_HOME.THIRD_SECTION_PARAGRAPH' | translate}}</h4>
         </div>
       </div>
 
@@ -101,9 +103,8 @@
 
       <div class="text-group text-light col-xl-6 d-flex align-items-center justify-content-center">
         <div class="px-5">
-          <h1 class="display-4 mb-4"><strong>Crie perfis para crianças.</strong></h1>
-          <h4>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar
-            a mais por isso.</h4>
+          <h1 class="display-4 mb-4"><strong>{{'PUBLIC_HOME.FOURTH_SECTION_TITLE' | translate}}</strong></h1>
+          <h4>{{'PUBLIC_HOME.FOURTH_SECTION_PARAGRAPH' | translate}}</h4>
         </div>
       </div>
     </div>
@@ -114,7 +115,7 @@
       <div style="margin-bottom:30px;">
         <h1 style="color:#fff; font-size: 50px;">
           <strong>
-            Perguntas frequentes
+            {{'PUBLIC_HOME.ACCORDIONS_TITLE' | translate}}
           </strong>
         </h1>
       </div>
@@ -123,9 +124,9 @@
           <div class="card">
             <div class="card-header" id="headingOne" >
               <h2 class="mb-0 d-flex">
-                <button class="btn d-flex btn-block text-left btn-toggle collapsed" type="button" data-toggle="collapse"
+                <button class="btn d-flex btn-block btn-toggle justify-content-between collapsed" type="button" data-toggle="collapse"
                   data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" #botão>
-                  <span class="">O que é a Netflix?</span>
+                  <span class="">{{'PUBLIC_HOME.FIRST_ACCORDION_TITLE' | translate}}</span>
                   <button class="plus-Button">+</button>
               </button>
               </h2>
@@ -134,8 +135,7 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body">
                 <span>
-                  A Netflix é um serviço de transmissão online que oferece uma ampla variedade de séries, filmes e
-                  documentários premiados em milhares de aparelhos conectados à internet.
+                  {{'PUBLIC_HOME.FIRST_ACCORDION_PARAGRAPH' | translate}}
                 </span>
               </div>
             </div>
@@ -143,9 +143,9 @@
           <div class="card mt-2">
             <div class="card-header" id="headingTwo">
               <h2 class="mb-0 d-flex">
-                <button class="btn d-inlineflex btn-block btn-toggle text-left collapsed" type="button"
+                <button class="btn d-flex btn-block btn-toggle justify-content-between collapsed" type="button"
                   data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <span class="">Quanto custa a Netflix?</span>
+                  <span class="">{{'PUBLIC_HOME.SECOND_ACCORDION_TITLE' | translate}}</span>
                   <button class="plus-Button2">+</button>
               </button>
               </h2>
@@ -153,8 +153,7 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
               <div class="card-body">
                 <span>
-                  Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa
-                  mensal única. Os planos variam de R$25,90 a R$55,90 por mês. Sem contrato nem taxas extras.
+                  {{'PUBLIC_HOME.SECOND_ACCORDION_PARAGRAPH' | translate}}
                 </span>
               </div>
             </div>
@@ -162,10 +161,10 @@
           <div class="card mt-2">
             <div class="card-header" id="headingThree">
               <h2 class="mb-0 d-flex">
-                <button class="btn d-inlineflex btn-block btn-toggle text-left collapsed" type="button"
+                <button class="btn d-flex btn-block btn-toggle justify-content-between collapsed" type="button"
                   data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
                   aria-controls="collapseThree">
-                <span>Onde posso assistir?</span>
+                <span>{{'PUBLIC_HOME.THIRD_ACCORDION_TITLE' | translate}}</span>
                 <button class="plus-Button3">+</button>
               </button>
               </h2>
@@ -173,8 +172,7 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
               <div class="card-body">
                 <span>
-                  Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa
-                  mensal única. Os planos variam de R$25,90 a R$55,90 por mês. Sem contrato nem taxas extras.
+                  {{'PUBLIC_HOME.THIRD_ACCORDION_PARAGRAPH' | translate}}
                 </span>
               </div>
             </div>
@@ -182,10 +180,10 @@
           <div class="card mt-2">
             <div class="card-header" id="headingFour">
               <h2 class="mb-0 d-flex">
-                <button class="btn d-inlineflex btn-block btn-toggle text-left collapsed" type="button"
+                <button class="btn d-flex btn-block btn-toggle justify-content-between collapsed" type="button"
                   data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
                   aria-controls="collapseFour">
-                  <span>Como faço para cancelar?</span>
+                  <span>{{'PUBLIC_HOME.FOURTH_ACCORDION_TITLE' | translate}}</span>
                   <button class="plus-Button4">+</button>
               </button>
               </h2>
@@ -193,19 +191,18 @@
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
               <div class="card-body">
                 <span>
-                  A Netflix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na internet
-                  com apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua assinatura
-                  a qualquer momento. </span>
+                  {{'PUBLIC_HOME.FOURTH_ACCORDION_PARAGRAPH' | translate}}
+                </span>
               </div>
             </div>
           </div>
           <div class="card mt-2">
             <div class="card-header" id="headingFive">
               <h2 class="mb-0 d-flex">
-                <button class="btn d-inlineflex btn-block btn-toggle text-left collapsed" type="button"
+                <button class="btn d-flex btn-block btn-toggle justify-content-between collapsed" type="button"
                   data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
                   aria-controls="collapseFive">
-                  O que eu posso assistir na Netflix?
+                  {{'PUBLIC_HOME.FIFTH_ACCORDION_TITLE' | translate}}
                   <button class="plus-Button5">+</button>
                 </button>
               </h2>
@@ -213,8 +210,7 @@
             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
               <div class="card-body">
                 <span>
-                  A Netflix tem um grande catálogo de filmes, documentários, séries, originais Netflix premiados e muito
-                  mais. Assista o quanto quiser, quando quiser.
+                  {{'PUBLIC_HOME.FIFTH_ACCORDION_PARAGRAPH' | translate}}
                 </span>
               </div>
             </div>
@@ -222,10 +218,10 @@
           <div class="card mt-2">
             <div class="card-header" id="headingSix">
               <h2 class="mb-0 d-flex">
-                <button class="d-inlineflex btn btn-block btn-toggle text-left collapsed" type="button"
+                <button class="d-flex btn btn-block btn-toggle justify-content-between collapsed" type="button"
                   data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
                   aria-controls="collapseSix">
-                  A Netflix é adequada para crianças?
+                  {{'PUBLIC_HOME.SIXTH_ACCORDION_TITLE' | translate}}
                   <button class="plus-Button6">+</button>
                 </button>
               </h2>
@@ -233,11 +229,7 @@
             <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
               <div class="card-body">
                 <span>
-                  A experiência infantil da Netflix faz parte da sua assinatura para que as crianças se divirtam em seu
-                  próprio espaço com séries e filmes familiares sob a supervisão dos pais.O recurso de controle dos
-                  pais, incluso nos perfis para crianças e protegido por PIN, permite restringir a classificação etária
-                  do conteúdo que as crianças podem ver e bloquear títulos específicos que você não quer que elas
-                  assistam.
+                  {{'PUBLIC_HOME.SIXTH_ACCORDION_PARAGRAPH' | translate}}
                 </span>
               </div>
             </div>
@@ -250,7 +242,7 @@
       </div>
     </div>
   </div>
-  <div class="d-flex flex-column align-items-center justify-content-center rodape-section mt-2 p-5 w-100">
+  <div class="rodape-section mt-2 p-5">
     <app-rodape></app-rodape>
   </div>
 </div>

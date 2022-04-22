@@ -71,7 +71,7 @@ label {
 }
 
 .toggle-bar{
-  width: 815px;
+  width: 70%;
   font-size: 1.625rem;
   font-weight: 400;
 }
@@ -91,42 +91,36 @@ label {
   border: none;
   color: #fff;
   background-color:#303030;
-  margin-left: 500px;
 }
 
 .plus-Button2{
   border: none;
   color: #fff;
   background-color:#303030;
-  margin-left: 437px;
 }
 
 .plus-Button3{
   border: none;
   color: #fff;
   background-color:#303030;
-  margin-left: 471px;
 }
 
 .plus-Button4{
   border: none;
   color: #fff;
   background-color:#303030;
-  margin-left: 406px;
 }
 
 .plus-Button5{
   border: none;
   color: #fff;
   background-color:#303030;
-  margin-left: 300px;
 }
 
 .plus-Button6{
   border: none;
   color: #fff;
   background-color:#303030;
-  margin-left: 285px;
 }
 
 @media(max-width: 1199px){

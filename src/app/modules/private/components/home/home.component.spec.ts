@@ -10,7 +10,6 @@ import { CarouselComponent, IvyCarouselModule } from 'angular-responsive-carouse
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
-  let router: Router;
 
 
   beforeEach(async () => {
@@ -29,7 +28,6 @@ describe('HomeComponent', () => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    router = TestBed.inject(Router);
   });
 
   it('should create', () => {
@@ -49,38 +47,6 @@ describe('HomeComponent', () => {
       component.mainMovieClick();
       expect(component.movieClickedId).toEqual(568124);
       expect(component.showDetails).toEqual(true);
-    });
-    it('should navigate to login', () => {
-      jest.spyOn(router, 'navigate').mockReturnValue(null);
-      component.returnLogin();
-      expect(router.navigate).toHaveBeenCalledWith(['public/login']);
-    });
-    it('Should clean session and local storage', () => {
-      var localStorageMock = (function() {
-        var store = {};
-        return {
-          getItem: function(key) {
-            return store[key];
-          },
-          setItem: function(key, value) {
-            store[key] = value.toString();
-          },
-          clear: function() {
-            store = {};
-          },
-          removeItem: function(key) {
-            delete store[key];
-          }
-        };
-      })();
-      Object.defineProperty(window, 'localStorage', { value: localStorageMock });
-      jest.restoreAllMocks();
-      const returnLogin = jest.spyOn(component, 'returnLogin');
-      const localStorage = jest.spyOn(localStorageMock, 'removeItem');
-      component.resetStorage();
-      expect(localStorage).toBeCalled();
-      expect(window.sessionStorage.getItem('usuario')).toBe(null);
-      expect(returnLogin).toHaveBeenCalled();
     });
   });
 });

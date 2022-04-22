@@ -23,23 +23,13 @@
                 <strong>Assistir</strong>
               </button>
 
-              <div class="circle-btn d-flex align-items-center justify-content-center ml-2">
-                <i class="fa-solid fa-plus btn-icon"></i>
-              </div>
-
-              <div class="circle-btn d-flex align-items-center justify-content-center ml-2">
-                <i class="fa-solid fa-thumbs-up btn-icon"></i>
-              </div>
-
-              <div class="circle-btn d-flex align-items-center justify-content-center ml-2">
-                <i class="fa-solid fa-thumbs-down btn-icon"></i>
-              </div>
+              <app-btn-icon type="plus"></app-btn-icon>
+              <app-btn-icon type="like"></app-btn-icon>
+              <app-btn-icon type="dislike"></app-btn-icon>
             </div>
 
             <div class="right-btn" *ngIf="safeUrl">
-              <div class="circle-btn d-flex align-items-center justify-content-center ml-2">
-                <i class="fa-solid fa-volume-high btn-icon"></i>
-              </div>
+              <app-btn-icon type="volume"></app-btn-icon>
             </div>
           </div>
         </div>
@@ -95,15 +85,14 @@
           </div>
         </div>
 
-        <div class="px-5 more-group">
-          <div class="circle-btn d-flex align-items-center justify-content-center ml-2 more-circle"
-            (click)="toggleSimilar()">
-            <i class="fa-solid fa-angle-down btn-icon" *ngIf="!showAllSimilar"></i>
-            <i class="fa-solid fa-angle-up btn-icon" *ngIf="showAllSimilar"></i>
-          </div>
+        <div class="more-group">
+          <app-btn-icon class="more-circle" type="more" (click)="toggleSimilar()"
+            *ngIf="!showAllSimilar"></app-btn-icon>
+          <app-btn-icon class="more-circle" type="less" (click)="toggleSimilar()"
+            *ngIf="showAllSimilar"></app-btn-icon>
         </div>
 
-        <div class="final-info px-5 text-light">
+        <div class="final-info px-5 mt-4 text-light">
           <h4><strong>Sobre {{movie.title}}</strong></h4>
 
           <div class="other-info w-100 d-flex flex-wrap mb-2 mt-3">

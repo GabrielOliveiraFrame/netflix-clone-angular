@@ -1,0 +1,114 @@
+{
+  "PUBLIC_HOME": {
+    "PT_OPTION": "Portuguese",
+    "EN_OPTION": "English",
+    "LOGIN_BTN": "Login",
+    "TITLE": "<strong>Movies, series and more. <br>Unlimited.</strong>",
+    "SUBTITLE": "Watch wherever you want. cancel whenever you want.",
+
+    "FIRST_SECTION_TITLE": "Enjoy on TV.",
+    "FIRST_SECTION_PARAGRAPH": "Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and other devices.",
+    "MOVIE_DOWNLOAD": "Download in progress...",
+    "SECOND_SECTION_TITLE": "Download series to watch offline.",
+    "SECOND_SECTION_PARAGRAPH": "Save your favorite titles and always have something to watch.",
+    "THIRD_SECTION_TITLE": "Watch whenever you want.",
+    "THIRD_SECTION_PARAGRAPH": "Watch on your cell phone, tablet, Smart TV or notebook without paying extra for it.",
+    "FOURTH_SECTION_TITLE": "Create profiles for kids.",
+    "FOURTH_SECTION_PARAGRAPH": "Let the kids adventure with their favorite characters in a space made just for them, without paying extra for it.",
+
+    "ACCORDIONS_TITLE": "Common questions",
+    "FIRST_ACCORDION_TITLE": "What is Netflix?",
+    "FIRST_ACCORDION_PARAGRAPH": "Netflix is an online streaming service that offers a wide variety of award-winning series, movies and documentaries on thousands of internet-connected devices.",
+    "SECOND_ACCORDION_TITLE": "How much does Netflix cost?",
+    "SECOND_ACCORDION_PARAGRAPH": "Watch Netflix on your phone, tablet, smart TV, laptop or streaming device for a one-time monthly fee. Plans range from R$25.90 to R$55.90 per month. No contract or extra fees.",
+    "THIRD_ACCORDION_TITLE": "Where can I watch?",
+    "THIRD_ACCORDION_PARAGRAPH": "Watch Netflix on your phone, tablet, smart TV, laptop or streaming device for a one-time monthly fee. Plans range from R$25.90 to R$55.90 per month. No contract or extra fees.",
+    "FOURTH_ACCORDION_TITLE": "How do I cancel?",
+    "FOURTH_ACCORDION_PARAGRAPH": "Netflix is flexible. There are no contracts or commitments. You can cancel your internet account with just two clicks. There is no cancellation fee – you can start or end your subscription at any time.",
+    "FIFTH_ACCORDION_TITLE": "What can I watch on Netflix?",
+    "FIFTH_ACCORDION_PARAGRAPH": "Netflix has a huge catalog of award-winning movies, documentaries, series, Netflix originals and more. Watch as much as you want, whenever you want.",
+    "SIXTH_ACCORDION_TITLE": "Is Netflix suitable for children?",
+    "SIXTH_ACCORDION_PARAGRAPH": "The Netflix Kids Experience is part of your subscription so kids can enjoy their own space with family series and movies under the supervision of their parents. the age rating of the content kids can see and block specific titles you don't want them to watch."
+  },
+  "HOME_INPUT": {
+    "TITLE": "Ready to watch? Enter your email to create or restart your subscription.",
+    "SUBMIT_BTN": "Come on"
+  },
+  "SIGN_UP": {
+    "LOGIN_BTN": "Login",
+    "LEVEL": "STEP {{value}} FROM",
+
+    "FIRST_SECTION_TITLE": "Finish setting up your account",
+    "FIRST_SECTION_PARAGRAPH": "Netflix is ​​personalized for you. Create a password to watch on any device whenever you want.",
+    "FIRST_SECTION_BTN": "Next",
+    "SECOND_SECTION_TITLE": "Create a password to start your subscription",
+    "SECOND_SECTION_PARAGRAPH_1": "Only a few more steps to go!",
+    "SECOND_SECTION_PARAGRAPH_2": "We also hate forms.",
+    "SECOND_SECTION_PASSWORD_LABEL": "Add a password",
+    "SECOND_SECTION_BTN": "Register",
+    "THIRD_SECTION_TITLE": "Start your plan.",
+    "THIRD_SECTION_ITEM_1": "No commitment, cancel whenever you want.",
+    "THIRD_SECTION_ITEM_2": "All Netflix content for one affordable price.",
+    "THIRD_SECTION_ITEM_3": "Watch as much as you want on all your devices.",
+    "THIRD_SECTION_BTN": "To start"
+  },
+  "LOGIN": {
+    "TITLE": "Login",
+    "CREDENTIALS_ERR": "Incorrect email and/or password!",
+    "PASSWORD_LABEL": "Password",
+    "REMEMBER": "Remember me",
+    "HELP": "Need help?",
+    "FACEBOOK": "Connect with Facebook",
+    "NEW": "New around here?",
+    "SIGN_UP": "Subscribe now",
+    "MORE_TEXT": "This page is protected by Google reCAPTCHA to ensure you are not a robot.",
+    "MORE_BTN": "Know more.",
+    "ADDITIONAL_INFO": "The information collected by Google reCAPTCHA is subject to the <a href=´https://policies.google.com/privacy´ target=´blank´>Privacy Policy</a> and <a href=´https://policies .google.com/terms´ target=´blank´>Terms of Use</a>, and are used to provide, maintain and improve the reCAPTCHA service and for security reasons (they are not used to display personalized ads by Google)."
+  },
+  "FOOTER":{
+    "PHONE": "Questions? Call <a class='footer-top-a' href='tel:0800-761-4631'>0800-761-4631</a>",
+    "FAQ": "Frequently Asked Questions",
+    "HELP": "Help Center",
+    "ACCOUNT": "Account",
+    "MEDIA_CENTER": "Media Center",
+    "INVESTORS": "Investor Relations",
+    "JOBS": "Careers",
+    "GIFT_REDEEM": "Redeem prepaid card",
+    "BUY_GIFT": "Buy prepaid card",
+    "WAYS_TO_WATCH": "Ways to Watch",
+    "TERMS": "Terms of Use",
+    "PRIVACY": "Privacy Policy",
+    "COOKIES": "Cookies Preference",
+    "CORPORATE_INFORMATION": "Corporate Information",
+    "CONTACT_US": "Contact us",
+    "SPEED_TEST": "Speed ​​Test",
+    "LEGAL_NOTICES": "Legal notices",
+    "ONLY_ON_NETFLIX": "Only on Netflix",
+    "PT_OPTION": "Portuguese",
+    "EN_OPTION": "English",
+    "NETFLIX": "Netflix Brazil"
+  },
+  "PRIVATE_HEADER": {
+    "HOME": "Home",
+    "MOVIES": "Movies",
+    "HITS": "Hits",
+    "LIST": "My list",
+    "LOGOUT": "Logout"
+  },
+  "PRIVATE_HOME": {
+    "MOVIE_TITLE": "ENCANTO",
+    "MOVIE_RELEASE": "Release is in March",
+    "MOVIE_SINOPSE": "A girl named Mirabel Madrigal grows up as the only non-magical member of her family, who live hidden in a vibrant enchanted house in the mountains of Colombia.",
+    "MOVIE_INFO": "More information",
+    "TOP_RATED_MOVIES": "Top Rated Movies"
+  },
+  "VALIDATORS": {
+    "REQUIRED": "The {{fieldName}} field is required.",
+    "MIN_LENGTH": "The {{fieldName}} field must be at least {{minLength}} characters.",
+    "MAX_LENGTH": "The {{fieldName}} field must be at most {{maxLength}} characters.",
+    "EMAIL": "Please enter a valid email address."
+  },
+  "FIELD_NAMES": {
+    "PASSWORD": "password"
+  }
+}

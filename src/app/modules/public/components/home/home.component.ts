@@ -1,5 +1,7 @@
 import { Component,  ElementRef,  OnInit, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { MoviesService } from 'src/app/shared/service/movies.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +10,11 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private translate: TranslateService,
+    private moviesService: MoviesService
+  ) {}
 
   ngOnInit(): void {
   }
@@ -16,5 +22,12 @@ export class HomeComponent implements OnInit {
   navigateLogin(){
     this.router.navigate(['/public/login']);
   }
+
+  useLanguage(language: string): void {
+    this.translate.use(language);
+    localStorage.setItem('language', language);
+    this.moviesService.setLanguage(language);
+  }
+
 
 }

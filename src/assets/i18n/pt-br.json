@@ -1,0 +1,114 @@
+{
+  "PUBLIC_HOME": {
+    "PT_OPTION": "Português",
+    "EN_OPTION": "Inglês",
+    "LOGIN_BTN": "Entrar",
+    "TITLE": "<strong>Filmes, séries e muito mais. <br>Sem limites.</strong>",
+    "SUBTITLE": "Assista onde quiser. Cancele quando quiser.",
+
+    "FIRST_SECTION_TITLE": "Aproveite na TV.",
+    "FIRST_SECTION_PARAGRAPH": "Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.",
+    "MOVIE_DOWNLOAD": "Download em andamento...",
+    "SECOND_SECTION_TITLE": "Baixe séries para assistir offline.",
+    "SECOND_SECTION_PARAGRAPH": "Salve seus títulos favoritos e sempre tenha algo para assistir.",
+    "THIRD_SECTION_TITLE": "Assista quando quiser.",
+    "THIRD_SECTION_PARAGRAPH": "Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por isso.",
+    "FOURTH_SECTION_TITLE": "Crie perfis para crianças.",
+    "FOURTH_SECTION_PARAGRAPH": "Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.",
+
+    "ACCORDIONS_TITLE": "Perguntas frequentes",
+    "FIRST_ACCORDION_TITLE": "O que é a Netflix?",
+    "FIRST_ACCORDION_PARAGRAPH": "A Netflix é um serviço de transmissão online que oferece uma ampla variedade de séries, filmes e documentários premiados em milhares de aparelhos conectados à internet.",
+    "SECOND_ACCORDION_TITLE": "Quanto custa a Netflix?",
+    "SECOND_ACCORDION_PARAGRAPH": " Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa mensal única. Os planos variam de R$25,90 a R$55,90 por mês. Sem contrato nem taxas extras.",
+    "THIRD_ACCORDION_TITLE": "Onde posso assistir?",
+    "THIRD_ACCORDION_PARAGRAPH": "Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa mensal única. Os planos variam de R$25,90 a R$55,90 por mês. Sem contrato nem taxas extras.",
+    "FOURTH_ACCORDION_TITLE": "Como faço para cancelar?",
+    "FOURTH_ACCORDION_PARAGRAPH": "A Netflix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na internet com apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua assinatura a qualquer momento.",
+    "FIFTH_ACCORDION_TITLE": "O que eu posso assistir na Netflix?",
+    "FIFTH_ACCORDION_PARAGRAPH": "A Netflix tem um grande catálogo de filmes, documentários, séries, originais Netflix premiados e muito mais. Assista o quanto quiser, quando quiser.",
+    "SIXTH_ACCORDION_TITLE": "A Netflix é adequada para crianças?",
+    "SIXTH_ACCORDION_PARAGRAPH": "A experiência infantil da Netflix faz parte da sua assinatura para que as crianças se divirtam em seu próprio espaço com séries e filmes familiares sob a supervisão dos pais.O recurso de controle dos pais, incluso nos perfis para crianças e protegido por PIN, permite restringir a classificação etária do conteúdo que as crianças podem ver e bloquear títulos específicos que você não quer que elas assistam."
+  },
+  "HOME_INPUT": {
+    "TITLE": "Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.",
+    "SUBMIT_BTN": "Vamos-lá"
+  },
+  "SIGN_UP": {
+    "LOGIN_BTN": "Entrar",
+    "LEVEL": "PASSO {{value}} DE",
+
+    "FIRST_SECTION_TITLE": "Termine de configurar sua conta",
+    "FIRST_SECTION_PARAGRAPH": "A Netflix é personalizada para você. Crie uma senha para assistir em qualquer aparelho quando quiser.",
+    "FIRST_SECTION_BTN": "Próximo",
+    "SECOND_SECTION_TITLE": "Crie uma senha para iniciar sua assinatura",
+    "SECOND_SECTION_PARAGRAPH_1": "Faltam só mais alguns passos!",
+    "SECOND_SECTION_PARAGRAPH_2": "Nós também detestamos formulários.",
+    "SECOND_SECTION_PASSWORD_LABEL": "Adicione uma senha",
+    "SECOND_SECTION_BTN": "Cadastrar",
+    "THIRD_SECTION_TITLE": "Comece o seu plano.",
+    "THIRD_SECTION_ITEM_1": "Sem compromisso, cancele quando quiser.",
+    "THIRD_SECTION_ITEM_2": "Todo o conteúdo da Netflix por um preço único e acessível.",
+    "THIRD_SECTION_ITEM_3": "Assista o quanto quiser em todos os seus aparelhos.",
+    "THIRD_SECTION_BTN": "Começar"
+  },
+  "LOGIN": {
+    "TITLE": "Entrar",
+    "CREDENTIALS_ERR": "Email e/ou senha incorretos!",
+    "PASSWORD_LABEL": "Senha",
+    "REMEMBER": "Lembre-se de mim",
+    "HELP": "Precisa de ajuda?",
+    "FACEBOOK": "Conectar com o Facebook",
+    "NEW": "Novo por aqui?",
+    "SIGN_UP": "Assine Agora",
+    "MORE_TEXT": "Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.",
+    "MORE_BTN": "Saiba mais.",
+    "ADDITIONAL_INFO": "As informações recolhidas pelo Google reCAPTCHA estão sujeitas à <a href=´https://policies.google.com/privacy´ target=´blank´>Política de Privacidade</a> e <a href=´https://policies.google.com/terms´ target=´blank´>Termos de Uso</a>, e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google)."
+  },
+  "FOOTER":{
+    "PHONE": "Dúvidas? Ligue <a class='footer-top-a' href='tel:0800-761-4631'>0800-761-4631</a>",
+    "FAQ": "Perguntas frequentes",
+    "HELP": "Centro de ajuda",
+    "ACCOUNT": "Conta",
+    "MEDIA_CENTER": "Media Center",
+    "INVESTORS": "Relações com investidores",
+    "JOBS": "Carreiras",
+    "GIFT_REDEEM": "Resgatar cartão pré-pago",
+    "BUY_GIFT": "Comprar cartão pré-pago",
+    "WAYS_TO_WATCH": "Formas de assistir",
+    "TERMS": "Termos de uso",
+    "PRIVACY": "Política de privacidade",
+    "COOKIES": "Preferência de cookies",
+    "CORPORATE_INFORMATION": "Informações corporativas",
+    "CONTACT_US": "Entre em contato conosco",
+    "SPEED_TEST": "Teste de velocidade",
+    "LEGAL_NOTICES": "Avisos legais",
+    "ONLY_ON_NETFLIX": "Só na Netflix",
+    "PT_OPTION": "Português",
+    "EN_OPTION": "Inglês",
+    "NETFLIX": "Netflix Brasil"
+  },
+  "PRIVATE_HEADER": {
+    "HOME": "Início",
+    "MOVIES": "Filmes",
+    "HITS": "Bombando",
+    "LIST": "Minha Lista",
+    "LOGOUT": "Sair"
+  },
+  "PRIVATE_HOME": {
+    "MOVIE_TITLE": "ENCANTO",
+    "MOVIE_RELEASE": "O lançamento é em Março",
+    "MOVIE_SINOPSE": "Uma garota chamada Mirabel Madrigal cresce como o único membro não mágico de sua família, que vivem escondidos em uma vibrante casa encantada nas montanhas da Colômbia.",
+    "MOVIE_INFO": "Mais Informações",
+    "TOP_RATED_MOVIES": "Filmes Melhores Avaliados"
+  },
+  "VALIDATORS": {
+    "REQUIRED": "O campo {{fieldName}} é obrigatório.",
+    "MIN_LENGTH": "O campo {{fieldName}} deve ter pelo menos {{minLength}} caracteres.",
+    "MAX_LENGTH": "O campo {{fieldName}} deve ter no máximo {{maxLength}} caracteres.",
+    "EMAIL": "Digite um endereço de e-mail válido."
+  },
+  "FIELD_NAMES": {
+    "PASSWORD": "senha"
+  }
+}

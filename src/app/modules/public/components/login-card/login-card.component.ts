@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AnalyticsService } from 'src/app/shared/service/analytics.service';
 import { UserService } from 'src/app/shared/service/user.service';
 import { FormValidations } from 'src/app/shared/validators/form-validations';
 
@@ -23,7 +24,8 @@ export class LoginCardComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router:Router,
-    private userService: UserService
+    private userService: UserService,
+    private analyticsService: AnalyticsService
   ) { }
 
   ngOnInit(): void {
@@ -83,6 +85,8 @@ export class LoginCardComponent implements OnInit {
 
     this.navigatePrivate();
     this.loading = false;
+
+    this.analyticsService.eventEmitter('do_login', this.responseUser.email);
   }
 
   navigatePrivate(){

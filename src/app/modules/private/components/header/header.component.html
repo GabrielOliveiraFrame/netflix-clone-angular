@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-nav nav-bar fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="logo" class="logo">
+  </a>
+  <button class="navbar-toggler mt-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav w-100 d-flex justify-content-between">
+      <div class="navbar-nav nav-links">
+        <a class="nav-link active" href="#"><strong>
+          {{ 'PRIVATE_HEADER.HOME' | translate}}
+        </strong></a>
+        <a class="nav-link active" href="#">
+          {{ 'PRIVATE_HEADER.MOVIES' | translate}}
+        </a>
+        <a class="nav-link active" href="#">
+          {{ 'PRIVATE_HEADER.HITS' | translate}}
+        </a>
+        <a class="nav-link active" href="#">
+          {{ 'PRIVATE_HEADER.LIST' | translate}}
+        </a>
+      </div>
+
+      <div class="user-feat d-lg-flex align-items-center">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <div>
+          <i class="fa-solid fa-bell btn-bell"></i>
+        </div>
+        <div class="dropdown">
+          <i class="fa-solid fa-address-card btn-user" data-toggle="dropdown" data-offset="90,90"></i>
+          <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="dropdownMenuLink">
+            <button class="btn btn-danger" (click)="resetStorage()">
+              {{ 'PRIVATE_HEADER.LOGOUT' | translate}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

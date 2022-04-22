@@ -1,7 +1,7 @@
-import { HttpClient, JsonpClientBackend } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AnalyticsService } from 'src/app/shared/service/analytics.service';
 import { UserService } from 'src/app/shared/service/user.service';
 import { FormValidations } from 'src/app/shared/validators/form-validations';
 
@@ -12,7 +12,13 @@ import { FormValidations } from 'src/app/shared/validators/form-validations';
 })
 export class SignUpCardComponent implements OnInit {
 
-  constructor(private router: Router, private formbuilder: FormBuilder, private http: HttpClient, private userService: UserService) { }
+  constructor(
+    private router: Router,
+    private formbuilder: FormBuilder,
+    private userService: UserService,
+    private analyticsService: AnalyticsService
+  ) { }
+
   public signUpForm!: FormGroup;
   public cont:number = 0;
   logErr = false;
@@ -26,36 +32,33 @@ export class SignUpCardComponent implements OnInit {
   }
 
   navigateNext(){
-    if(this.cont == 1){
-      if(this.signUpForm.valid){
-        this.cont++;
-      } else {
-        FormValidations.checkValidations(this.signUpForm);
-      }
-    } else {
-      this.cont++;
-    }
+    this.cont++;
   }
 
   signUp(){
-    this.userService.getUser(this.signUpForm.get('email').value).subscribe({
-      next: (result: any) => {
-       console.log(result);
-        if(result.length !== 0){
-          alert("Esse usuário já esta cadastrado");
+    if(this.signUpForm.valid){
+      this.userService.getUser(this.signUpForm.get('email').value).subscribe({
+        next: (result: any) => {
+         console.log(result);
+          if(result.length !== 0){
+            alert("Esse usuário já esta cadastrado");
+            this.logErr = true;
+          }else{
+            this.userService.postUser(this.signUpForm.value).subscribe({
+              next: (data:any) =>{
+                this.navigateNext();
+                this.analyticsService.eventEmitter('create_account', this.signUpForm.get('email').value);
+              }
+            });
+          }
+        }, error: (err: any) => {
+          alert('Erro de servidor, tente novamente!');
           this.logErr = true;
-        }else{
-          this.userService.postUser(this.signUpForm.value).subscribe({
-            next: (data:any) =>{
-              this.navigateLogin();
-            }
-          });
         }
-      }, error: (err: any) => {
-        alert('Erro de servidor, tente novamente!');
-        this.logErr = true;
-      }
-    })
+      })
+    } else {
+      FormValidations.checkValidations(this.signUpForm);
+    }
   }
 
   formBuilder(){

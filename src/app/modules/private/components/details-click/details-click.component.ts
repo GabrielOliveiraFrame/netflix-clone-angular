@@ -2,7 +2,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Component, Input, OnChanges } from '@angular/core';
 import { MoviesService } from 'src/app/shared/service/movies.service';
 
-
 @Component({
   selector: 'app-details-click',
   templateUrl: './details-click.component.html',
@@ -20,7 +19,7 @@ export class DetailsClickComponent implements OnChanges {
 
   constructor(
     private moviesService: MoviesService,
-    private domSani: DomSanitizer
+    private domSani: DomSanitizer,
   ) { }
 
   ngOnChanges(): void {
@@ -72,3 +71,5 @@ export class DetailsClickComponent implements OnChanges {
     this.showAllSimilar = false;
   }
 }
+
+
