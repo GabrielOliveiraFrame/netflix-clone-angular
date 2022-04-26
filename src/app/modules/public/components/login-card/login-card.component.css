@@ -1,4 +1,4 @@
-.card-container{
+.content{
   background-image: linear-gradient(to top, transparent 0%, rgb(0, 0, 0) 150%),
   linear-gradient(to bottom, transparent 0%, rgb(0, 0, 0) 130%),
   url(https://assets.nflxext.com/ffe/siteui/vlv3/ed0b5df9-ba9d-4534-bd09-57993daeda56/52609230-dd78-4dba-82a1-8bb3ac3803e6/BR-pt-20220214-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
@@ -6,7 +6,7 @@
   background-size: cover;
 }
 
-.card-container .logo{
+.logo{
   width: 180px;
 }
 

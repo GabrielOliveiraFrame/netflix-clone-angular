@@ -8,11 +8,14 @@
     url("https://www.themoviedb.org/t/p/original/2Sm3asuwKVNTzgm2nF6hp5mwEfh.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50% 30%;
     height: 100vh;
+    min-height: 620px;
+    max-height: 650px;
 }
 
 .texto-filme {
-    margin-top: 30px;
+    margin-top: 80px;
     width: 500px;
     margin-left: 60px;
     color: #fff;

@@ -19,6 +19,9 @@ label {
   url(https://assets.nflxext.com/ffe/siteui/vlv3/ed0b5df9-ba9d-4534-bd09-57993daeda56/52609230-dd78-4dba-82a1-8bb3ac3803e6/BR-pt-20220214-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 700px;
 }
 
 .first-section .text-apresentation{
@@ -27,7 +30,11 @@ label {
 
 .features-section{
   background-color: rgb(0, 0, 0);
-  min-height: 65vh;
+  min-height: 550px;
+}
+
+.features-section .row{
+  max-width: 1500px;
 }
 
 .animation-tv img, .animation-desktop img{
@@ -72,21 +79,25 @@ label {
 
 .toggle-bar{
   width: 70%;
+  max-width: 1000px;
   font-size: 1.625rem;
   font-weight: 400;
 }
+
 .card{
   background: #303030;
   color: #fff;
 }
+
 .btn-toggle{
   color: #fff;
   font-size: 1.625rem;
 }
+
 .rodape-section{
   background-color: rgb(0, 0, 0);
-  min-height: 65vh;
 }
+
 .plus-Button{
   border: none;
   color: #fff;
@@ -123,15 +134,17 @@ label {
   background-color:#303030;
 }
 
+button:not(.collapsed) > button {
+  transition: .1s;
+  transform:rotate(45deg) ;
+}
+
 @media(max-width: 1199px){
   .text-group{
     text-align: center;
   }
 }
 
-button:not(.collapsed) > button {
-  transition: .1s;
-  transform:rotate(45deg) ;
-}
+
 
 
