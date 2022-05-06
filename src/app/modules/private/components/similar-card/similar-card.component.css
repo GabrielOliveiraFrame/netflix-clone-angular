@@ -30,3 +30,9 @@
   font-size: 20px;
   color: #fff;
 }
+
+@media(max-width: 767px){
+  .card .card-img-top{
+    max-height: 250px;
+  }
+}
