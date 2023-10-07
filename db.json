@@ -1,59 +1,9 @@
 {
   "Users": [
     {
-      "email": "ola@ola",
-      "password": "123456",
-      "id": 1
-    },
-    {
-      "email": "WWWW@222",
-      "senha": "exSPcU9Yz5hekQ9",
-      "id": 2
-    },
-    {
-      "email": "2222222#@33",
-      "senha": "exSPcU9Yz5hekQ9",
-      "id": 3
-    },
-    {
-      "email": "frfffffff@fde",
-      "senha": "exSPcU9Yz5hekQ9",
-      "id": 4
-    },
-    {
-      "email": "leo@loeee",
-      "senha": "exSPcU9Yz5hekQ9",
-      "id": 5
-    },
-    {
-      "email": "leo@leoeeee",
-      "senha": "exSPcU9Yz5hekQ9",
-      "id": 6
-    },
-    {
-      "email": "leooe@leoo",
-      "senha": "exSPcU9Yz5hekQ9",
-      "id": 7
-    },
-    {
       "email": "teste@teste.com",
       "senha": "12345",
-      "id": 8
-    },
-    {
-      "email": "teste2@teste.com",
-      "senha": "12345",
-      "id": 9
-    },
-    {
-      "email": "email@email.com",
-      "senha": "12345",
-      "id": 10
-    },
-    {
-      "email": "email3@email.com",
-      "senha": "12345",
-      "id": 11
+      "id": 1
     }
   ]
 }
