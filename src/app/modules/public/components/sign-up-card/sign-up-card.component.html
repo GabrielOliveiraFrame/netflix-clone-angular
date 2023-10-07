@@ -113,8 +113,12 @@
                                     <app-err-msg *ngIf="!signUpForm.valid" [fieldName]="'FIELD_NAMES.PASSWORD' | translate"
                                         [control]="signUpForm.get('senha')"></app-err-msg>
                                 </div>
-                                <button type="button" (click)="signUp()" class="path-button2">
+                                <button type="button" (click)="signUp()" class="path-button2" *ngIf="!loading">
                                     {{'SIGN_UP.SECOND_SECTION_BTN' | translate}}
+                                </button>
+
+                                <button class="path-button2" type="button" disabled *ngIf="loading">
+                                  <span class="spinner-border" role="status" aria-hidden="true"></span>
                                 </button>
                             </form>
                         </div>

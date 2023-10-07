@@ -22,6 +22,7 @@ export class SignUpCardComponent implements OnInit {
   public signUpForm!: FormGroup;
   public cont:number = 0;
   logErr = false;
+  loading = false;
 
   ngOnInit(): void {
     this.formBuilder();
@@ -37,21 +38,25 @@ export class SignUpCardComponent implements OnInit {
 
   signUp(){
     if(this.signUpForm.valid){
+      this.loading = true;
       this.userService.getUser(this.signUpForm.get('email').value).subscribe({
         next: (result: any) => {
          console.log(result);
           if(result.length !== 0){
+            this.loading = false;
             alert("Esse usuário já esta cadastrado");
             this.logErr = true;
           }else{
             this.userService.postUser(this.signUpForm.value).subscribe({
               next: (data:any) =>{
+                this.loading = false;
                 this.navigateNext();
                 this.analyticsService.eventEmitter('create_account', this.signUpForm.get('email').value);
               }
             });
           }
         }, error: (err: any) => {
+          this.loading = false;
           alert('Erro de servidor, tente novamente!');
           this.logErr = true;
         }
